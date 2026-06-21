@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
     <SEO
-      title="Avion Training & Placement Centre | Turn Your Passion Into Profession"
-      description="A premium tech academy and institute ERP ecosystem for modern learners, placement-ready batches, and measurable student growth."
+      title="Avion Training & Placement Centre | Learn AI & Web Dev"
+      description="Top programming training and placement center. Master Web Development or AI/ML with industry experts and secure your dream tech job. Start learning today!"
       image="/assets/avion-hero.png"
     />
       <section className="relative min-h-[92vh] overflow-hidden">
@@ -26,10 +26,10 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="section-eyebrow">Avion Training & Placement Centre</p>
             <h1 className="mt-5 max-w-xl text-[clamp(3rem,7vw,6.2rem)] font-black leading-[0.95] text-white">
-              Turn Your Passion Into Profession
+              Premium Programming Training & Placement Centre
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              A premium tech academy and institute ERP ecosystem for modern learners, placement-ready batches, and measurable student growth.
+              Avion is a futuristic & leading training and placement ecosystem for learners who want practical skills, career confidence, and measurable growth. We offer mentor-led courses in AI/ML, Web Development, and Digital Marketing with portfolio-first learning and 100% placement support.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/register" className="btn btn-primary">
@@ -173,13 +173,20 @@ export default function Home() {
           </div>
           <div>
             <SectionHeading eyebrow="Gallery Preview" title="Labs, workshops, drives, demo days." />
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {gallery.slice(0, 4).map((item, index) => (
-                <div className="grid aspect-[4/3] place-items-center rounded-lg border border-white/10 bg-gradient-to-br from-white/12 to-avion-green/10 text-center font-black text-white" key={item}>
-                  <span>{index + 1}. {item}</span>
-                </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {gallery.slice(0, 6).map((item) => (
+                <GlassCard className="group relative overflow-hidden" key={item.title}>
+                  <img src={item.media} alt={item.title} className="h-40 w-full object-cover transition-all group-hover:scale-110" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-all group-hover:opacity-100">
+                    {item.type === "Video" ? (
+                      <PlayCircle size={48} className="text-white" />
+                    ) : (
+                      <ChevronRight size={48} className="text-white" />
+                    )}
+                  </div>
+                </GlassCard>
               ))}
-            </div>
+              </div>
           </div>
         </div>
       </section>

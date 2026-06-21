@@ -19,7 +19,7 @@ export default function Footer() {
               alt="Futuristic Avion academy technology environment"
             />
           <p className="mt-4 max-w-md text-sm leading-7 text-white/60">
-            A futuristic training and placement ecosystem for learners who want practical skills, career confidence, and measurable growth.
+            Leading programming training and placement center. Master Web Development or AI/ML with industry experts and secure your dream tech job. Start learning today!
           </p>
           <div className="mt-5 flex gap-3">
             {socialLinks.map(({ label, icon: Icon }) => (
@@ -42,16 +42,16 @@ export default function Footer() {
           <p className="footer-title">Contact</p>
           <div className="mt-4 grid gap-3 text-sm text-white/60">
             <span className="flex gap-2"><Phone size={16} /> +91 88786 65826</span>
-            <span className="flex gap-2"><Mail size={16} /> hello@avionacademy.in</span>
-            <span className="flex gap-2"><MapPin size={16} /> Training & Placement Centre</span>
-            <a className="flex gap-2 text-avion-green" href="https://wa.me/9188778665826" target="_blank" rel="noreferrer">
+            <span className="flex gap-2"><Mail size={16} /> avionacademyplacement@gmail.com</span>
+            <span className="flex gap-2"><MapPin size={16} /> 145/A, Kalani Bagh, Dewas, Madhya Pradesh</span>
+            <a className="flex gap-2 text-avion-green" href="https://wa.me/918878665826" target="_blank" rel="noreferrer">
               <MessageCircle size={16} /> WhatsApp
             </a>
           </div>
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/45">
-        © 2026 Avion Training & Placement Centre. Built for Phase 1 ERP launch.
+        © 2026 Avion Training & Placement Centre. All rights reserved. Designed and developed by <a href="https://www.avionacademy.co.in" target="_blank" rel="noreferrer" className="text-avion-green hover:underline">Aman Khan</a>.
       </div>
     </footer>
   );

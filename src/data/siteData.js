@@ -130,12 +130,36 @@ export const team = [
 ];
 
 export const gallery = [
-  "Workshop Lab",
-  "Placement Drive",
-  "Hackathon Night",
-  "Demo Day",
-  "Career Session",
-  "Code Review"
+  {
+    title: "AI Workshop",
+    type: "Workshop",
+    media: "/assets/gallery/ai-workshop.jpg"
+  },
+  {
+    title: "Web Development Bootcamp",
+    type: "Workshop",
+    media: "/assets/gallery/web-dev-bootcamp.jpg"
+  },
+  {
+    title: "Student Hackathon",
+    type: "Event",
+    media: "/assets/gallery/student-hackathon.jpg"
+  },
+  {
+    title: "Placement Drive",
+    type: "Event",
+    media: "/assets/gallery/placement-drive.jpg"
+  },
+  {
+    title: "AI Project Showcase",
+    type: "Project",
+    media: "/assets/gallery/ai-project-showcase.jpg"
+  },
+  {
+    title: "Web Dev Project Showcase",
+    type: "Project",
+    media: "/assets/gallery/web-dev-project-showcase.jpg"
+  }
 ];
 
 export const faqs = [

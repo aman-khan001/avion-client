@@ -15,15 +15,16 @@ export default function Gallery() {
             <button className="btn btn-ghost" key={item}>{item}</button>
           ))}
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {gallery.map((item, index) => (
-            <GlassCard className="group overflow-hidden" key={item}>
-              <div className="grid aspect-video place-items-center bg-gradient-to-br from-avion-navy via-white/10 to-avion-green/20">
-                {index % 2 === 0 ? <Search size={34} className="text-white" /> : <PlayCircle size={38} className="text-avion-green" />}
-              </div>
-              <div className="p-5">
-                <p className="font-black">{item}</p>
-                <p className="mt-1 text-sm text-white/55">Click-ready lightbox preview surface.</p>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {gallery.map((item) => (
+            <GlassCard className="group relative overflow-hidden" key={item.title}>
+              <img src={item.media} alt={item.title} className="h-60 w-full object-cover transition-all group-hover:scale-110" />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-all group-hover:opacity-100">
+                {item.type === "Video" ? (
+                  <PlayCircle size={48} className="text-white" />
+                ) : (
+                  <Search size={48} className="text-white" />
+                )}
               </div>
             </GlassCard>
           ))}
