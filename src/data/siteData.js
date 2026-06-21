@@ -17,54 +17,34 @@ import {
 
 export const courses = [
   {
-    title: "Full Stack Development",
-    category: "Development",
-    duration: "6 Months",
-    fee: "₹45,000",
-    instructor: "Avion Mentor Team",
-    icon: Code2,
-    level: "Advanced",
-    syllabus: ["React", "Node.js", "MongoDB", "Deployment"]
-  },
-  {
-    title: "MERN Stack",
-    category: "Development",
-    duration: "4 Months",
-    fee: "₹35,000",
-    instructor: "Senior MERN Trainer",
-    icon: DatabaseZap,
-    level: "Intermediate",
-    syllabus: ["Express APIs", "JWT Auth", "React Query", "Projects"]
-  },
-  {
-    title: "AI & ML",
+    title: "Complete AI & ML",
     category: "AI",
-    duration: "5 Months",
-    fee: "₹52,000",
-    instructor: "AI Research Mentor",
+    duration: "9 Months",
+    fee: "₹3,500/month",
+    instructor: "Aman Khan",
     icon: BrainCircuit,
     level: "Advanced",
-    syllabus: ["Python", "Pandas", "Models", "Evaluation"]
+    syllabus: ["Python", "Data Science & Data Analytics", "Automation", "DSA/MySQL", "AI/ML"]
   },
   {
-    title: "Data Science",
-    category: "Data",
-    duration: "5 Months",
-    fee: "₹48,000",
-    instructor: "Data Mentor",
+    title: "Complete FullStack Development",
+    category: "Web Development",
+    duration: "8 Months",
+    fee: "₹3,000/months",
+    instructor: "Aman Khan",
     icon: BarChart3,
-    level: "Intermediate",
-    syllabus: ["SQL", "Statistics", "Dashboards", "Case Studies"]
+    level: "Advanced",
+    syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "ReactJS + Redux", "NodeJs", "MongoDB", "ExpressJs", "NextJs", "GIT/GITHUB", "Deployment"]
   },
   {
     title: "Python",
     category: "Programming",
     duration: "2 Months",
-    fee: "₹15,000",
-    instructor: "Python Trainer",
+    fee: "₹7,500",
+    instructor: "Kalpana Yadav",
     icon: BookOpenCheck,
     level: "Beginner",
-    syllabus: ["Core Python", "OOP", "Files", "Automation"]
+    syllabus: ["Core Python", "OOP", "Files Handling", "Advanced Python"]
   },
   {
     title: "Django",
@@ -79,32 +59,22 @@ export const courses = [
   {
     title: "Computer Skills",
     category: "Foundation",
-    duration: "2 Months",
-    fee: "₹9,000",
+    duration: "3 Months",
+    fee: "₹7,500",
     instructor: "Foundation Trainer",
     icon: GraduationCap,
     level: "Beginner",
-    syllabus: ["MS Office", "Typing", "Email", "Internet"]
+    syllabus: ["MS Office", "Typing", "Operating System Guide", "Email", "Internet", "Canva"]
   },
   {
     title: "Digital Marketing",
     category: "Marketing",
     duration: "3 Months",
-    fee: "₹24,000",
-    instructor: "Growth Mentor",
+    fee: "₹12,000",
+    instructor: "Kalpana Yadav",
     icon: Megaphone,
     level: "Beginner",
     syllabus: ["SEO", "Ads", "Analytics", "Campaigns"]
-  },
-  {
-    title: "Interview Preparation",
-    category: "Career",
-    duration: "1 Month",
-    fee: "₹8,000",
-    instructor: "Placement Cell",
-    icon: BriefcaseBusiness,
-    level: "Beginner",
-    syllabus: ["Resume", "Aptitude", "Mock Interviews", "HR"]
   }
 ];
 
@@ -147,15 +117,16 @@ export const batches = [
 ];
 
 export const quizRankings = [
-  { rank: 1, name: "Aarav S", points: 980 },
-  { rank: 2, name: "Nisha K", points: 940 },
-  { rank: 3, name: "Imran P", points: 910 }
+  { rank: 1, name: "Prince V", points: 980 },
+  { rank: 2, name: "Zikra K", points: 940 },
+  { rank: 3, name: "Mansi V", points: 890 }
 ];
 
 export const team = [
-  { name: "Rahul Verma", role: "Full Stack Trainer", skills: "React, Node, MongoDB", exp: "8 yrs" },
-  { name: "Sneha Iyer", role: "AI Mentor", skills: "Python, ML, Analytics", exp: "7 yrs" },
-  { name: "Karan Shah", role: "Placement Coordinator", skills: "HR, Aptitude, Interviews", exp: "6 yrs" }
+  { name: "Aman Khan", role: "Director & Tech Head", skills: "AI/ML, Python, React, Node, MongoDB", exp: "7 yrs" },
+  { name: "Kalpana Yadav", role: "Manager & Mentor", skills: "Digital Marketing, Python, Web Development", exp: "5 yrs" },
+  { name: "Ravi Dubey", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "8 yrs" },
+  { name: "Asjad Qadari", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "6 yrs" }
 ];
 
 export const gallery = [

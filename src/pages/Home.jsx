@@ -4,14 +4,20 @@ import { Link } from "react-router-dom";
 import GlassCard from "../components/GlassCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
 import { batches, courses, faqs, gallery, quizRankings, stats, stories, team, whyChoose } from "../data/siteData.js";
+import SEO from "../components/SEO.jsx";
 
 export default function Home() {
   return (
     <>
+    <SEO
+      title="Avion Training & Placement Centre | Turn Your Passion Into Profession"
+      description="A premium tech academy and institute ERP ecosystem for modern learners, placement-ready batches, and measurable student growth."
+      image="/assets/avion-hero.png"
+    />
       <section className="relative min-h-[92vh] overflow-hidden">
         <div className="hero-grid absolute inset-0 z-0" />
         <img
-          className="absolute inset-0 h-full w-full object-cover opacity-[0.58]"
+          className="absolute inset-0 h-full w-full object-fit "
           src="/assets/avion-hero.png"
           alt="Futuristic Avion academy technology environment"
         />
@@ -19,7 +25,7 @@ export default function Home() {
         <div className="container relative z-10 grid min-h-[92vh] items-center gap-10 py-16 lg:grid-cols-[1fr_0.75fr]">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="section-eyebrow">Avion Training & Placement Centre</p>
-            <h1 className="mt-5 max-w-4xl text-[clamp(3rem,9vw,7.2rem)] font-black leading-[0.95] text-white">
+            <h1 className="mt-5 max-w-xl text-[clamp(3rem,7vw,6.2rem)] font-black leading-[0.95] text-white">
               Turn Your Passion Into Profession
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
@@ -37,7 +43,7 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
-          <GlassCard className="hidden p-5 lg:block">
+          {/* <GlassCard className="hidden p-5 lg:block">
             <div className="rounded-lg border border-avion-green/30 bg-avion-green/10 p-5">
               <p className="text-sm font-bold text-avion-green">Live IMS Preview</p>
               <div className="mt-5 grid gap-3">
@@ -49,7 +55,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </GlassCard>
+          </GlassCard> */}
         </div>
       </section>
 

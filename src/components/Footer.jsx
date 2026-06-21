@@ -14,7 +14,8 @@ export default function Footer() {
         <div>
           <img
               className="w-36 object-cover h-auto object-center"
-              src="/assets/logo.png"
+              src="/assets/avion-logo.png"
+              loading="lazy"
               alt="Futuristic Avion academy technology environment"
             />
           <p className="mt-4 max-w-md text-sm leading-7 text-white/60">

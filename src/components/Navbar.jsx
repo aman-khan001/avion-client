@@ -26,8 +26,9 @@ export default function Navbar() {
           <span>
             {/* <span className="block text-base font-black uppercase tracking-[0.22em] text-white">Avion</span> */}
             <img
-              className="w-32 object-cover h-auto object-center"
-              src="/assets/logo.png"
+              className="w-28 object-cover h-8 object-center"
+              src="/assets/avion-logo.png"
+              loading="lazy"
               alt="Futuristic Avion academy technology environment"
             />
             <span className="block text-xs text-white/55">

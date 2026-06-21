@@ -1,15 +1,21 @@
 import GlassCard from "../components/GlassCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
+import SEO from "../components/SEO.jsx";
 import { achievements, team } from "../data/siteData.js";
 
 export default function About() {
-  return (
+  return (<>
+    <SEO 
+      title="About AVION Academy | A Modern Institute Story with a Placement-First Operating System"
+      description="Avion Training & Placement Centre exists to help students convert curiosity into career-ready skill. We are a premier programming training and placement institute dedicated to bridging the gap between academia and industry. By focusing exclusively on high-demand tech fields—Artificial Intelligence, Machine Learning, and Full-Stack Web Development—we equip students with practical coding skills. Our career-first approach combines rigorous technical training, portfolio building, and active interview placement drives."
+      image="/assets/avion-hero.png"
+    />
     <section className="section">
       <div className="container">
         <SectionHeading
           eyebrow="About Us"
           title="A modern institute story with a placement-first operating system."
-          text="Avion Training & Placement Centre exists to help students convert curiosity into career-ready skill. Phase 1 brings the public brand, secure authentication, student records, and admin workflows into one scalable MERN platform."
+          text="Avion Training & Placement Centre exists to help students convert curiosity into career-ready skill. We are a premier programming training and placement institute dedicated to bridging the gap between academia and industry. By focusing exclusively on high-demand tech fields—Artificial Intelligence, Machine Learning, and Full-Stack Web Development—we equip students with practical coding skills. Our career-first approach combines rigorous technical training, portfolio building, and active interview placement drives."
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           <GlassCard className="p-6">
@@ -51,5 +57,6 @@ export default function About() {
         </div>
       </div>
     </section>
+    </>
   );
 }
