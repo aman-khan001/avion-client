@@ -19,14 +19,11 @@ function SEO({
 }) {
   const location = useLocation();
 
-  const siteUrl =
-    import.meta.env.VITE_SITE_URL || "https://avionacademy.co.in";
+  const siteUrl = import.meta.env.VITE_SITE_URL || "https://avionacademy.co.in";
 
   const canonicalUrl = `${siteUrl}${location.pathname}`;
 
-  const imageUrl = image.startsWith("http")
-    ? image
-    : `${siteUrl}${image}`;
+  const imageUrl = image.startsWith("http") ? image : `${siteUrl}${image}`;
 
   const schema = {
     "@context": "https://schema.org",
@@ -45,8 +42,8 @@ function SEO({
     sameAs: [
       "https://www.instagram.com/your-instagram",
       "https://www.facebook.com/your-facebook",
-      "https://www.linkedin.com/company/your-linkedin"
-    ]
+      "https://www.linkedin.com/company/your-linkedin",
+    ],
   };
 
   return (
@@ -54,6 +51,27 @@ function SEO({
       {/* Basic SEO */}
       <title>{title}</title>
 
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/assets/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/assets/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/assets/favicon-16x16.png"
+      />
+      <link href="/assets/android-chrome-192x192.png" rel="icon" sizes="192x192" />
+      <link href="/assets/android-chrome-512x512.png" rel="icon" sizes="512x512" />
+      <link rel="manifest" href="/assets/site.webmanifest" />
+    
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 
@@ -82,9 +100,7 @@ function SEO({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       {/* Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
     </Helmet>
   );
 }
