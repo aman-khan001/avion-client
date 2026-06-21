@@ -197,8 +197,8 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-3">
             {team.map((member) => (
               <GlassCard className="p-5" key={member.name}>
-                <div className="grid h-16 w-16 place-items-center rounded-lg bg-avion-green text-2xl font-black text-avion-ink">
-                  {member.name.charAt(0)}
+                <div className="h-20 w-20 rounded-lg bg-white/10" >
+                  <img src={member.media} alt={member.name} className="h-full w-full rounded-lg object-cover" />
                 </div>
                 <p className="mt-5 font-black text-white">{member.name}</p>
                 <p className="mt-1 text-sm text-avion-green">{member.role}</p>

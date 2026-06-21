@@ -43,21 +43,20 @@ textarea {
   z-index: 0;
   opacity: 0.42;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1.5px),
-    radial-gradient(circle, rgba(159, 239, 0, 0.55) 1px, transparent 1.5px);
+    radial-gradient(circle, rgba(255, 255, 255, .9) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(196, 255, 79, 0.75) 2px, transparent 2.5px);
   background-position: 0 0, 42px 54px;
   background-size: 96px 96px, 132px 132px;
-  animation: particles 24s linear infinite;
+  animation: particles 10s linear infinite;
 }
 
 @keyframes particles {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
   to {
-    transform: translate3d(-72px, 72px, 0);
+    background-position: -96px -96px, 132px 132px;
   }
 }
+
+
 
 .glass-card {
   border: 1px solid rgba(255, 255, 255, 0.12);

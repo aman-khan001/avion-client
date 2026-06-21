@@ -123,10 +123,10 @@ export const quizRankings = [
 ];
 
 export const team = [
-  { name: "Aman Khan", role: "Director & Tech Head", skills: "AI/ML, Python, React, Node, MongoDB", exp: "7 yrs" },
-  { name: "Kalpana Yadav", role: "Manager & Mentor", skills: "Digital Marketing, Python, Web Development", exp: "5 yrs" },
-  { name: "Ravi Dubey", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "8 yrs" },
-  { name: "Asjad Qadari", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "6 yrs" }
+  { name: "Aman Khan", role: "Director & Tech Head", skills: "AI/ML, Python, React, Node, MongoDB", exp: "7 yrs", media: "/assets/aman-khan.png" },
+  { name: "Kalpana Yadav", role: "Manager & Mentor", skills: "Digital Marketing, Python, Web Development", exp: "5 yrs", media: "/assets/kalpana-yadav.png" },
+  { name: "Ravi Dubey", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "8 yrs", media: "/assets/ravi-dubey.png" },
+  { name: "Asjad Qadri", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "6 yrs", media: "/assets/asjad-qadri.png" }
 ];
 
 export const gallery = [
