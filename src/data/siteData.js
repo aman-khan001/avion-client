@@ -133,32 +133,32 @@ export const gallery = [
   {
     title: "AI Workshop",
     type: "Workshop",
-    media: "/assets/gallery/ai-workshop.jpg"
+    media: "/assets/gallery1.png"
   },
   {
     title: "Web Development Bootcamp",
     type: "Workshop",
-    media: "/assets/gallery/web-dev-bootcamp.jpg"
+    media: "/assets/gallery2.png"
   },
   {
     title: "Student Hackathon",
     type: "Event",
-    media: "/assets/gallery/student-hackathon.jpg"
+    media: "/assets/gallery3.png"
   },
   {
     title: "Placement Drive",
     type: "Event",
-    media: "/assets/gallery/placement-drive.jpg"
+    media: "/assets/gallery.png"
   },
   {
     title: "AI Project Showcase",
     type: "Project",
-    media: "/assets/gallery/ai-project-showcase.jpg"
+    media: "/assets/ai-project-showcase.jpg"
   },
   {
     title: "Web Dev Project Showcase",
     type: "Project",
-    media: "/assets/gallery/web-dev-project-showcase.jpg"
+    media: "/assets/web-dev-project-showcase.jpg"
   }
 ];
 
