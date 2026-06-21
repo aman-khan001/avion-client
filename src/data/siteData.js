@@ -34,7 +34,8 @@ export const courses = [
     instructor: "Aman Khan",
     icon: BarChart3,
     level: "Advanced",
-    syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "ReactJS + Redux", "NodeJs", "MongoDB", "ExpressJs", "NextJs", "GIT/GITHUB", "Deployment"]
+    syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "MERN Stack", "NextJs", "GIT/GITHUB", "Deployment"]
+    // syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "ReactJS + Redux", "NodeJs", "MongoDB", "ExpressJs", "NextJs", "GIT/GITHUB", "Deployment"]
   },
   {
     title: "Python",

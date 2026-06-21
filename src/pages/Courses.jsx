@@ -25,13 +25,15 @@ export default function Courses() {
                 <h3 className="mt-6 text-2xl font-black">{course.title}</h3>
                 <p className="mt-2 text-sm text-white/60">{course.duration} · {course.fee}</p>
                 <p className="mt-2 text-sm text-avion-green">Instructor: {course.instructor}</p>
-                <div className="mt-6 grid gap-3">
+                <ul className="mt-4 grid gap-2 text-sm text-white/60">
                   {course.syllabus.map((item) => (
-                    <span className="flex items-center gap-2 text-sm text-white/65" key={item}>
-                      <CheckCircle2 size={16} className="text-avion-green" /> {item}
-                    </span>
+                    <li className="flex items-center gap-2" key={item}>
+                      <CheckCircle2 size={16} className="text-avion-green" />
+                      {item}
+                    </li>
                   ))}
-                </div>
+                </ul>
+                <p className="mt-4 text-sm text-white/45">{course.description}</p>
                 <Link className="btn btn-primary mt-7 justify-center" to="/register">
                   Enroll
                 </Link>
