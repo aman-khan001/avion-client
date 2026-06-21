@@ -12,7 +12,7 @@ export default function Blog() {
   return (
     <section className="section">
       <div className="container">
-        <SectionHeading eyebrow="Blog" title="Admin-published articles for learners." text="The Phase 1 UI includes search, categories, tags, and comment-ready article cards; the CMS API can land in Phase 3/4." />
+        <SectionHeading eyebrow="Blog" title="Admin-published articles for learners." text="Welcome to our blog, where you can find the latest updates and insights." />
         <GlassCard className="mt-8 flex items-center gap-3 p-3">
           <Search size={18} className="text-avion-green" />
           <input className="w-full bg-transparent text-sm outline-none placeholder:text-white/40" placeholder="Search articles, categories, tags" />

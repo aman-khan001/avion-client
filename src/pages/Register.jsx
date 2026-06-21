@@ -67,7 +67,7 @@ export default function Register() {
     <section className="section">
       <div className="container grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <SectionHeading eyebrow="Student Registration" title="Register online and generate your student ID." text="Phase 1 creates the student account, login access, registration number, and fee status. Course and batch IDs connect automatically when live catalog data is selected." />
+          <SectionHeading eyebrow="Student Registration" title="Register online and generate your student ID." text="Build your career with us before competition gets tough!" />
           <GlassCard className="mt-8 p-5">
             <p className="text-sm font-black text-avion-green">Registration Includes</p>
             <div className="mt-4 grid gap-3 text-sm text-white/60">
