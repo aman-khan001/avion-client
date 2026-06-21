@@ -9,7 +9,7 @@ export default function Gallery() {
   return (
     <section className="section">
       <div className="container">
-        <SectionHeading eyebrow="Gallery" title="A visual archive of learning moments." text="Phase 1 includes responsive gallery and lightbox-ready cards for images, videos, events, and workshops." />
+        <SectionHeading eyebrow="Gallery" title="A visual archive of learning moments." text="Welcome to our gallery, where you can explore the vibrant world of learning and growth." />
         <div className="mt-8 flex flex-wrap gap-3">
           {categories.map((item) => (
             <button className="btn btn-ghost" key={item}>{item}</button>
