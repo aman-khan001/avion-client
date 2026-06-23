@@ -151,16 +151,6 @@ export const gallery = [
     type: "Event",
     media: "/assets/gallery.png"
   },
-  {
-    title: "AI Project Showcase",
-    type: "Project",
-    media: "/assets/ai-project-showcase.jpg"
-  },
-  {
-    title: "Web Dev Project Showcase",
-    type: "Project",
-    media: "/assets/web-dev-project-showcase.jpg"
-  }
 ];
 
 export const faqs = [

@@ -28,7 +28,7 @@ function SEO({
   const schema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "AVION Academy",
+    name: "Avion Training and Placement Centre",
     url: siteUrl,
     description,
     logo: `${siteUrl}/assets/avion-logo.png`,
@@ -40,9 +40,9 @@ function SEO({
       addressCountry: "IN",
     },
     sameAs: [
-      "https://www.instagram.com/your-instagram",
+      "https://www.instagram.com/avion_training_placement",
       "https://www.facebook.com/your-facebook",
-      "https://www.linkedin.com/company/your-linkedin",
+      "https://www.linkedin.com/company/avion-training-and-placement-centre/",
     ],
   };
 
