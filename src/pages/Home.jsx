@@ -12,7 +12,6 @@ import SectionHeading from "../components/SectionHeading.jsx";
 import {
   batches,
   courses,
-  faqs,
   gallery,
   quizRankings,
   stats,
@@ -25,11 +24,7 @@ import SEO from "../components/SEO.jsx";
 export default function Home() {
   return (
     <>
-      <SEO
-        title="Avion Training & Placement Centre | Learn AI & Web Dev"
-        description="Top programming training and placement center. Master Web Development or AI/ML with industry experts and secure your dream tech job. Start learning today!"
-        image="/assets/avion-hero.png"
-      />
+      
       <section className="relative min-h-[92vh] overflow-hidden">
         <div className="hero-grid absolute inset-0 z-0" />
         <img
@@ -302,12 +297,51 @@ export default function Home() {
             title="Clear answers before you take off."
           />
           <div className="mx-auto mt-10 grid max-w-4xl gap-4">
-            {faqs.map((faq) => (
-              <GlassCard className="p-6" key={faq.q}>
-                <h3 className="font-black text-white">{faq.q}</h3>
-                <p className="mt-2 text-sm leading-7 text-white/60">{faq.a}</p>
-              </GlassCard>
-            ))}
+            <GlassCard className="p-6">
+              <h3 className="font-black text-white">
+                Can beginners join Avion courses?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">
+                Yes. Foundation tracks start from basics, while advanced tracks
+                include screening and bridge sessions.{" "}
+              </p>
+            </GlassCard>
+            <GlassCard className="p-6">
+              <h3 className="font-black text-white">
+                Do students get certificates?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">
+                Yes. Certificates are issued after project, attendance, and
+                assessment completion.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-6">
+              <h3 className="font-black text-white">
+                Is placement support included?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">
+                Placement support, resume reviews, mock interviews, and
+                company-connect preparation are part of career tracks.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-6">
+              <h3 className="font-black text-white">
+                What is the duration of the courses?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">
+                The duration varies by course, typically ranging from 2 to 9
+                months, depending on the track and level of expertise.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-6">
+              <h3 className="font-black text-white">
+                Are there any prerequisites for advanced courses?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">
+                Yes. Advanced courses may require prior knowledge or completion
+                of foundational tracks. Screening tests may also be conducted.
+              </p>
+            </GlassCard>
           </div>
         </div>
       </section>
@@ -332,14 +366,14 @@ export default function Home() {
         </div>
       </section>
       <section className="section">
-        <section class="text-gray-600 body-font relative">
-          <div class="absolute inset-0 bg-gray-300">
+        <section className="text-gray-600 body-font relative">
+          <div className="absolute inset-0 bg-gray-300">
             <iframe
               width="100%"
               height="100%"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.787105145875!2d76.04302710000002!3d22.958066400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396317ae06154b81%3A0x7f58587c081a0079!2sAvion%20Training%20and%20Placement%20Centre!5e0!3m2!1sen!2sin!4v1782108188946!5m2!1sen!2sin"
               loading="lazy"
               className="filter grayscale contrast(1.3) opacity(0.4)"
@@ -350,8 +384,10 @@ export default function Home() {
               <h2 class="text-gray-50 text-lg mb-1 font-medium title-font">
                 Feedback
               </h2>
-              <p class="leading-relaxed mb-5 text-gray-200">
-                Post-ironic portland shabby chic echo park, banjo fashion axe
+              <p class="leading-relaxed text-[12px] mb-5 text-gray-200">
+                Avion Training & Placement Centre is committed to providing the
+                best learning experience. We value your feedback and suggestions
+                to improve our services.
               </p>
               <div class="relative mb-4">
                 <label for="email" class="leading-7 text-sm text-gray-200">
@@ -361,6 +397,7 @@ export default function Home() {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="Enter your email"
                   class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -371,6 +408,7 @@ export default function Home() {
                 <textarea
                   id="message"
                   name="message"
+                  placeholder="Enter your message"
                   class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
@@ -380,9 +418,10 @@ export default function Home() {
               >
                 Send Feedback
               </button>
-              <p class="text-xs text-gray-300 mt-3">
-                Chicharrones blog helvetica normcore iceland tousled brook viral
-                artisan.
+              <p class="text-[10px] text-gray-300 mt-3">
+                We respect your privacy. Your email and message will be kept
+                confidential and used solely for the purpose of improving our
+                services.
               </p>
             </div>
           </div>

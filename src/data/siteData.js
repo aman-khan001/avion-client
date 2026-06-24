@@ -153,20 +153,6 @@ export const gallery = [
   },
 ];
 
-export const faqs = [
-  {
-    q: "Can beginners join Avion courses?",
-    a: "Yes. Foundation tracks start from basics, while advanced tracks include screening and bridge sessions."
-  },
-  {
-    q: "Do students get certificates?",
-    a: "Yes. Certificates are issued after project, attendance, and assessment completion."
-  },
-  {
-    q: "Is placement support included?",
-    a: "Placement support, resume reviews, mock interviews, and company-connect preparation are part of career tracks."
-  }
-];
 
 export const adminChartData = [
   { month: "Jan", students: 36, revenue: 1.8 },

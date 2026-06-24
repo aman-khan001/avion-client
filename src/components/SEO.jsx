@@ -41,7 +41,7 @@ function SEO({
     },
     sameAs: [
       "https://www.instagram.com/avion_training_placement",
-      "https://www.facebook.com/your-facebook",
+      "https://www.facebook.com/share/1GyEr9kyd4/",
       "https://www.linkedin.com/company/avion-training-and-placement-centre/",
     ],
   };

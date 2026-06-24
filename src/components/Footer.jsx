@@ -6,7 +6,7 @@ import {
   MapPin,
   MessageCircle,
   Phone,
-  Facebook
+  Facebook,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -46,16 +46,6 @@ export default function Footer() {
 
             <a
               className="icon-btn"
-              key={Linkedin}
-              aria-label={Linkedin}
-              href="https://www.linkedin.com/company/avion-training-and-placement-centre/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Linkedin size={18} />
-            </a>
-            <a
-              className="icon-btn"
               key={Facebook}
               aria-label={Facebook}
               href="https://www.facebook.com/share/1GyEr9kyd4/"
@@ -64,6 +54,17 @@ export default function Footer() {
             >
               <Facebook size={18} />
             </a>
+            <a
+              className="icon-btn"
+              key={Linkedin}
+              aria-label={Linkedin}
+              href="https://www.linkedin.com/company/avion-training-and-placement-centre/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin size={18} />
+            </a>
+
             <a
               className="icon-btn"
               key={Github}
