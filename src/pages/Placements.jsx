@@ -14,15 +14,16 @@ const placementStats = [
 export default function Placements() {
   return (
     <>
-    <SEO
-      title="Placements | Avion Training & Placement Centre"
-      description="Explore our placement statistics and success stories. Discover how Avion Training & Placement Centre has helped students secure jobs in top tech companies with competitive packages."
-    />
+      <SEO
+        title="Placement Support in Dewas | AVION Academy Success Stories"
+        description="See how AVION Academy helps students in Dewas secure jobs with placement support, real success stories, and strong career outcomes in tech."
+      />
       <section className="section">
         <div className="container">
           <SectionHeading
             eyebrow="Placements"
             title="Placement support designed around proof of skill."
+            text="Our placement-focused approach in Dewas helps students showcase their work, sharpen interview readiness, and connect with career opportunities in the tech industry."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-4">
             {placementStats.map((stat) => {

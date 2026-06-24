@@ -16,6 +16,7 @@ function SEO({
   keywords = DEFAULT_KEYWORDS,
   image = "/og-image.jpg",
   noIndex = false,
+  faqItems = [],
 }) {
   const location = useLocation();
 
@@ -28,23 +29,42 @@ function SEO({
   const schema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "Avion Training and Placement Centre",
+    name: "AVION Academy",
+    alternateName: "Avion Training and Placement Centre",
     url: siteUrl,
     description,
     logo: `${siteUrl}/assets/avion-logo.png`,
     image: imageUrl,
+    email: "avionacademyplacement@gmail.com",
+    telephone: "+91-88786-65826",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Dewas",
       addressRegion: "Madhya Pradesh",
       addressCountry: "IN",
     },
+    areaServed: ["Dewas", "Madhya Pradesh", "India"],
     sameAs: [
       "https://www.instagram.com/avion_training_placement",
       "https://www.facebook.com/share/1GyEr9kyd4/",
       "https://www.linkedin.com/company/avion-training-and-placement-centre/",
     ],
   };
+
+  const faqSchema = faqItems.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
 
   return (
     <Helmet>
@@ -68,10 +88,18 @@ function SEO({
         sizes="16x16"
         href="/assets/favicon-16x16.png"
       />
-      <link href="/assets/android-chrome-192x192.png" rel="icon" sizes="192x192" />
-      <link href="/assets/android-chrome-512x512.png" rel="icon" sizes="512x512" />
+      <link
+        href="/assets/android-chrome-192x192.png"
+        rel="icon"
+        sizes="192x192"
+      />
+      <link
+        href="/assets/android-chrome-512x512.png"
+        rel="icon"
+        sizes="512x512"
+      />
       <link rel="manifest" href="/assets/site.webmanifest" />
-    
+
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 
@@ -101,6 +129,9 @@ function SEO({
 
       {/* Schema */}
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      {faqSchema ? (
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      ) : null}
     </Helmet>
   );
 }

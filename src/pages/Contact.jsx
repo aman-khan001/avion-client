@@ -3,19 +3,39 @@ import GlassCard from "../components/GlassCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
 import SEO from "../components/SEO.jsx";
 
+const faqItems = [
+  {
+    question: "What courses does AVION Academy offer?",
+    answer:
+      "AVION Academy offers training in Python, MERN Stack, web development, AI/ML, digital marketing, and related career-focused technology programs.",
+  },
+  {
+    question: "Is AVION Academy suitable for beginners?",
+    answer:
+      "Yes. The academy provides beginner-friendly learning paths as well as advanced training for learners who want to strengthen their technical skills.",
+  },
+  {
+    question: "Do you provide placement support?",
+    answer:
+      "Yes. The academy focuses on placement readiness through project-based learning, interview preparation, and career guidance support.",
+  },
+];
+
 export default function Contact() {
   return (
     <>
-    <SEO
-      title="Contact Us - Avion Training & Placement Centre"
-      description="Get in touch with Avion Training & Placement Centre. Book a free demo or talk to our placement desk."
-    />
+      <SEO
+        title="Contact AVION Academy | Book a Free Demo in Dewas"
+        description="Contact AVION Academy in Dewas to book a free demo, discuss courses, or speak with our placement team for career guidance and admission support."
+        faqItems={faqItems}
+      />
       <section className="section">
         <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading
               eyebrow="Contact"
               title="Book a free demo or talk to the placement desk."
+              text="Visit AVION Academy in Dewas to discuss your career goals, ask about our courses, or book a free demo session with our team."
             />
             <div className="mt-8 grid gap-4">
               <GlassCard className="flex gap-4 p-5">
@@ -50,6 +70,23 @@ export default function Contact() {
                 className="filter grayscale contrast(1.3) opacity(0.4)"
               ></iframe>
             </GlassCard>
+
+            <div className="mt-8">
+              <SectionHeading
+                eyebrow="FAQ"
+                title="Common questions about learning at AVION Academy"
+              />
+              <div className="mt-6 grid gap-4">
+                {faqItems.map((item) => (
+                  <GlassCard className="p-5" key={item.question}>
+                    <h3 className="text-lg font-black">{item.question}</h3>
+                    <p className="mt-2 text-sm leading-7 text-white/65">
+                      {item.answer}
+                    </p>
+                  </GlassCard>
+                ))}
+              </div>
+            </div>
           </div>
           <GlassCard className="p-6">
             <form className="grid gap-5">

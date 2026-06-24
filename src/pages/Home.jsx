@@ -24,7 +24,8 @@ import SEO from "../components/SEO.jsx";
 export default function Home() {
   return (
     <>
-      
+      <SEO />
+
       <section className="relative min-h-[92vh] overflow-hidden">
         <div className="hero-grid absolute inset-0 z-0" />
         <img
@@ -39,12 +40,17 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="section-eyebrow">Avion Training & Placement Centre</p>
-            <h1 className="mt-5 max-w-xl text-[clamp(3rem,7vw,6.2rem)] font-black leading-[0.95] text-white">
-              Premium Programming Training & Placement Centre
+            <p className="section-eyebrow">
+              AVION Academy | Programming Training in Dewas
+            </p>
+            <h1 className="mt-5 max-w-xl text-[clamp(2rem,6vw,5.2rem)] font-black leading-[0.95] text-white">
+              Best AI/ML & Web Development Training Centre in Dewas
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              Avion Training & Placement Centre is a premier institute dedicated to providing top-notch programming training and placement support. Our mission is to equip students with the skills and knowledge needed to excel in the tech industry, ensuring they are well-prepared for successful careers.
+              AVION Academy in Dewas helps students learn practical coding
+              skills, build real-world projects, and gain placement support in
+              high-demand fields like Python, MERN Stack, web development,
+              AI/ML, and digital marketing.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/register" className="btn btn-primary">
@@ -55,6 +61,9 @@ export default function Home() {
               </Link>
               <Link to="/courses" className="btn btn-ghost">
                 Explore Courses <ChevronRight size={18} />
+              </Link>
+              <Link to="/placements" className="btn btn-ghost">
+                Placement Support <ChevronRight size={18} />
               </Link>
             </div>
           </motion.div>
@@ -90,9 +99,9 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <SectionHeading
-            eyebrow="About Avion"
+            eyebrow="About AVION"
             title="Built like a tech startup. Focused like a career lab."
-            text="Avion combines skill training, placement support, student lifecycle tracking, and future-ready learning systems in one branded platform."
+            text="AVION Academy combines practical skill training, placement support, and career guidance in Dewas so learners can move from classroom knowledge to job-ready confidence."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {whyChoose.map((item, index) => {
@@ -123,6 +132,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Featured Courses"
               title="Career tracks with portfolio outcomes."
+              text="Explore our most popular training programs in Dewas for students who want to build real skills, create strong portfolios, and prepare for placement."
             />
             <Link to="/courses" className="btn btn-secondary w-fit">
               View all courses <ArrowRight size={18} />
@@ -135,14 +145,18 @@ export default function Home() {
                   Web Development
                 </span>
               </div>
-              <h3 className="mt-6 text-2xl font-black">Full Stack Web Development</h3>
+              <h3 className="mt-6 text-2xl font-black">
+                Full Stack Web Development
+              </h3>
               <p className="mt-2 text-sm text-white/60">
                 Duration: 9 months · Fee: ₹3000/month
               </p>
               <p className="mt-4 text-sm text-white/45">
-                Learn to build dynamic web applications using the MERN stack. Gain hands-on experience with real-world projects and prepare for a career in web development.
+                Learn to build dynamic web applications using the MERN stack.
+                Gain hands-on experience with real-world projects and prepare
+                for a career in web development.
               </p>
-              
+
               {/* <Link
                 className="btn btn-primary mt-7 justify-center"
                 to="/register"
@@ -156,12 +170,16 @@ export default function Home() {
                   AI/ML
                 </span>
               </div>
-              <h3 className="mt-6 text-2xl font-black">AI & Machine Learning</h3>
+              <h3 className="mt-6 text-2xl font-black">
+                AI & Machine Learning
+              </h3>
               <p className="mt-2 text-sm text-white/60">
                 Duration: 5 months · Fee: ₹3,500
               </p>
               <p className="mt-4 text-sm text-white/45">
-                Dive into the world of artificial intelligence and machine learning. Learn algorithms, data processing, and model building to create intelligent applications.
+                Dive into the world of artificial intelligence and machine
+                learning. Learn algorithms, data processing, and model building
+                to create intelligent applications.
               </p>
             </GlassCard>
             <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out  ">
@@ -170,18 +188,22 @@ export default function Home() {
                   Python
                 </span>
               </div>
-              <h3 className="mt-6 text-2xl font-black">Python Core + Advanced</h3>
+              <h3 className="mt-6 text-2xl font-black">
+                Python Core + Advanced
+              </h3>
               <p className="mt-2 text-sm text-white/60">
                 Duration: 4 months · Fee: ₹10,000
               </p>
               <p className="mt-4 text-sm text-white/45">
-                Master Python programming from basics to advanced concepts. Build projects and enhance your coding skills for various applications in software development and data science.
+                Master Python programming from basics to advanced concepts.
+                Build projects and enhance your coding skills for various
+                applications in software development and data science.
               </p>
             </GlassCard>
             <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
               <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60"> 
-                Digital Marketing
+                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                  Digital Marketing
                 </span>
               </div>
               <h3 className="mt-6 text-2xl font-black">Digital Marketing</h3>
@@ -189,13 +211,15 @@ export default function Home() {
                 Duration: 3 months · Fee: ₹12,000
               </p>
               <p className="mt-4 text-sm text-white/45">
-                Learn the fundamentals of digital marketing, including SEO, social media marketing, content creation, and analytics. Gain practical skills to promote businesses online effectively.
+                Learn the fundamentals of digital marketing, including SEO,
+                social media marketing, content creation, and analytics. Gain
+                practical skills to promote businesses online effectively.
               </p>
-              </GlassCard>
+            </GlassCard>
             <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
               <div className="flex items-center justify-between">
                 <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                Shopify Development
+                  Shopify Development
                 </span>
               </div>
               <h3 className="mt-6 text-2xl font-black">Shopify Development</h3>
@@ -203,10 +227,12 @@ export default function Home() {
                 Duration: 2 months · Fee: ₹8,000
               </p>
               <p className="mt-4 text-sm text-white/45">
-                Learn to create and customize e-commerce websites using Shopify. Understand the platform's features, themes, and apps to build online stores that drive sales and enhance user experience.
+                Learn to create and customize e-commerce websites using Shopify.
+                Understand the platform's features, themes, and apps to build
+                online stores that drive sales and enhance user experience.
               </p>
             </GlassCard>
-            
+
             {/* {courses.slice(0, 6).map((course, index) => {
               const Icon = course.icon;
               return (
