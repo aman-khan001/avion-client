@@ -44,15 +44,11 @@ export default function Home() {
               Premium Programming Training & Placement Centre
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              Avion is a futuristic & leading training and placement ecosystem
-              for learners who want practical skills, career confidence, and
-              measurable growth. We offer mentor-led courses in AI/ML, Web
-              Development, and Digital Marketing with portfolio-first learning
-              and 100% placement support.
+              Avion Training & Placement Centre is a premier institute dedicated to providing top-notch programming training and placement support. Our mission is to equip students with the skills and knowledge needed to excel in the tech industry, ensuring they are well-prepared for successful careers.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/register" className="btn btn-primary">
-                Register Now <ArrowRight size={18} />
+                Enroll Now <ArrowRight size={18} />
               </Link>
               <Link to="/contact" className="btn btn-secondary">
                 Book Free Demo <CalendarDays size={18} />
@@ -128,12 +124,90 @@ export default function Home() {
               eyebrow="Featured Courses"
               title="Career tracks with portfolio outcomes."
             />
-            <Link to="/courses" className="btn btn-ghost w-fit">
+            <Link to="/courses" className="btn btn-secondary w-fit">
               View all courses <ArrowRight size={18} />
             </Link>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {courses.slice(0, 6).map((course, index) => {
+            <GlassCard className="flex flex-col p-6 hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
+              <div className="flex items-center justify-between">
+                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                  Web Development
+                </span>
+              </div>
+              <h3 className="mt-6 text-2xl font-black">Full Stack Web Development</h3>
+              <p className="mt-2 text-sm text-white/60">
+                Duration: 9 months · Fee: ₹3000/month
+              </p>
+              <p className="mt-4 text-sm text-white/45">
+                Learn to build dynamic web applications using the MERN stack. Gain hands-on experience with real-world projects and prepare for a career in web development.
+              </p>
+              
+              {/* <Link
+                className="btn btn-primary mt-7 justify-center"
+                to="/register"
+              >
+                Enroll
+              </Link> */}
+            </GlassCard>
+            <GlassCard className="flex flex-col p-6 hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
+              <div className="flex items-center justify-between">
+                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                  AI/ML
+                </span>
+              </div>
+              <h3 className="mt-6 text-2xl font-black">AI & Machine Learning</h3>
+              <p className="mt-2 text-sm text-white/60">
+                Duration: 5 months · Fee: ₹3,500
+              </p>
+              <p className="mt-4 text-sm text-white/45">
+                Dive into the world of artificial intelligence and machine learning. Learn algorithms, data processing, and model building to create intelligent applications.
+              </p>
+            </GlassCard>
+            <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out  ">
+              <div className="flex items-center justify-between">
+                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                  Python
+                </span>
+              </div>
+              <h3 className="mt-6 text-2xl font-black">Python Core + Advanced</h3>
+              <p className="mt-2 text-sm text-white/60">
+                Duration: 4 months · Fee: ₹10,000
+              </p>
+              <p className="mt-4 text-sm text-white/45">
+                Master Python programming from basics to advanced concepts. Build projects and enhance your coding skills for various applications in software development and data science.
+              </p>
+            </GlassCard>
+            <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
+              <div className="flex items-center justify-between">
+                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60"> 
+                Digital Marketing
+                </span>
+              </div>
+              <h3 className="mt-6 text-2xl font-black">Digital Marketing</h3>
+              <p className="mt-2 text-sm text-white/60">
+                Duration: 3 months · Fee: ₹12,000
+              </p>
+              <p className="mt-4 text-sm text-white/45">
+                Learn the fundamentals of digital marketing, including SEO, social media marketing, content creation, and analytics. Gain practical skills to promote businesses online effectively.
+              </p>
+              </GlassCard>
+            <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
+              <div className="flex items-center justify-between">
+                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                Shopify Development
+                </span>
+              </div>
+              <h3 className="mt-6 text-2xl font-black">Shopify Development</h3>
+              <p className="mt-2 text-sm text-white/60">
+                Duration: 2 months · Fee: ₹8,000
+              </p>
+              <p className="mt-4 text-sm text-white/45">
+                Learn to create and customize e-commerce websites using Shopify. Understand the platform's features, themes, and apps to build online stores that drive sales and enhance user experience.
+              </p>
+            </GlassCard>
+            
+            {/* {courses.slice(0, 6).map((course, index) => {
               const Icon = course.icon;
               return (
                 <GlassCard
@@ -163,7 +237,7 @@ export default function Home() {
                   </div>
                 </GlassCard>
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>

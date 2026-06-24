@@ -66,11 +66,11 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link className="btn btn-ghost" to="/login">
+              {/* <Link className="btn btn-ghost" to="/login">
                 Login
-              </Link>
+              </Link> */}
               <Link className="btn btn-primary" to="/register">
-                Register Now
+                Enroll Now
               </Link>
             </>
           )}
