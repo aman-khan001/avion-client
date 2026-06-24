@@ -50,7 +50,10 @@ export default function Home() {
               AVION Academy in Dewas helps students learn practical coding
               skills, build real-world projects, and gain placement support in
               high-demand fields like Python, MERN Stack, web development,
-              AI/ML, and digital marketing.
+              AI/ML, and digital marketing. 
+            </p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+              We offer both online and offline courses with hands-on projects, career guidance, and placement support to help students secure jobs in the tech industry.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/register" className="btn btn-primary">
@@ -67,19 +70,7 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
-          {/* <GlassCard className="hidden p-5 lg:block">
-            <div className="rounded-lg border border-avion-green/30 bg-avion-green/10 p-5">
-              <p className="text-sm font-bold text-avion-green">Live IMS Preview</p>
-              <div className="mt-5 grid gap-3">
-                {["Student ID generation", "JWT auth and roles", "Course and batch allocation", "Admin analytics"].map((item) => (
-                  <div className="flex items-center justify-between rounded-lg bg-white/10 p-4" key={item}>
-                    <span className="text-sm text-white/75">{item}</span>
-                    <span className="h-2 w-2 rounded-full bg-avion-green shadow-glow" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </GlassCard> */}
+          
         </div>
       </section>
 
