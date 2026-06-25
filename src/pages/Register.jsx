@@ -72,46 +72,26 @@ async function onSubmit(values) {
         );
     }
 
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbz9gIiMls6BrbFpV79ygTbKxu5OowvE0Mu9GiIaI8R6wfGj3ohlouCnRq8F9QLTUxMEkw/exec",
-      {
-        method: "POST",
+    const formData = new FormData();
 
-        headers: {
-          "Content-Type":
-            "application/json",
-        },
+formData.append("fullName", values.fullName);
+formData.append("fatherName", values.guardianName);
+formData.append("email", values.email);
+formData.append("phone", values.phone);
+formData.append("address", values.address);
+formData.append("course", values.course);
+formData.append("schoolCollege", values.schoolCollege);
+formData.append("photoUrl", photoUrl);
+formData.append("aadharUrl", aadharUrl);
 
-        body: JSON.stringify({
-
-          fullName:
-            values.fullName,
-
-          fatherName:
-            values.guardianName,
-
-          email:
-            values.email,
-
-          phone:
-            values.phone,
-
-          address:
-            values.address,
-
-          course:
-            values.course,
-
-          schoolCollege:
-            values.schoolCollege,
-
-          photoUrl,
-
-          aadharUrl
-
-        }),
-      }
-    );
+await fetch(
+  "https://script.google.com/macros/s/AKfycbz9gIiMls6BrbFpV79ygTbKxu5OowvE0Mu9GiIaI8R6wfGj3ohlouCnRq8F9QLTUxMEkw/exec",
+  {
+    method: "POST",
+    mode: "no-cors",
+    body: formData,
+  }
+);
 
     alert(
       "Registration Successful"
@@ -247,7 +227,7 @@ async function onSubmit(values) {
                 <input
                   className="input"
                   type="file"
-                  accept="image/*"
+                  accept="image/*,.pdf"
                   {...register("aadhar")}
                 />
               </div>
