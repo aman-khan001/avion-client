@@ -1,0 +1,24 @@
+# AVION Academy
+
+## Overview
+AVION Academy is a training and placement institute in Dewas, Madhya Pradesh, offering practical education in programming, web development, Python, MERN Stack, AI/ML, and digital marketing. And it provides online and offline courses with hands-on projects, career guidance, and placement support to help students secure jobs in the tech industry.
+
+## Key Pages
+- Homepage: https://avionacademy.co.in/
+- About: https://avionacademy.co.in/about
+- Courses: https://avionacademy.co.in/courses
+- Placements: https://avionacademy.co.in/placements
+- Contact: https://avionacademy.co.in/contact
+
+## Services
+- Python training
+- MERN Stack development training
+- Full stack web development
+- AI/ML training
+- Digital marketing training
+- Placement support and career guidance
+
+## Contact
+- Email: avionacademyplacement@gmail.com
+- Phone: +91 88786 65826
+- Location: Dewas, Madhya Pradesh, India

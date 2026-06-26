@@ -9,7 +9,7 @@ export default function About() {
       <SEO
         title="About AVION Academy | Best Programming Training Institute in Dewas"
         description="Learn about AVION Academy, a trusted programming training and placement institute in Dewas offering web development, AI/ML, Python, and career-focused learning with placement support."
-        image="/assets/avion-hero.png"
+        image="/assets/avion-hero.jpeg"
       />
       <section className="section">
         <div className="container">

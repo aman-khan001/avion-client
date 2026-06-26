@@ -24,11 +24,11 @@ const posts = [
 export default function Blog() {
   return (
     <>
-    <SEO
-      title="Avion Academy Blog | Insights on Programming, AI, and Career Growth"
-      description="Explore our blog for the latest insights on programming, AI, and career growth. Learn from industry experts and stay updated with trends in tech education. "
-      image="/assets/avion-hero.png"
-    />
+      <SEO
+        title="Avion Academy Blog | Insights on Programming, AI, and Career Growth"
+        description="Explore our blog for the latest insights on programming, AI, and career growth. Learn from industry experts and stay updated with trends in tech education. "
+        image="/assets/avion-hero.jpeg"
+      />
       <section className="section">
         <div className="container">
           <SectionHeading

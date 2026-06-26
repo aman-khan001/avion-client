@@ -20,6 +20,7 @@ import {
   whyChoose,
 } from "../data/siteData.js";
 import SEO from "../components/SEO.jsx";
+import GoogleReviews from "../components/GoogleReviews.jsx";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         <div className="hero-grid absolute inset-0 z-0" />
         <img
           className="absolute inset-0 h-full w-full object-fit "
-          src="/assets/avion-hero.png"
+          src="/assets/avion-hero.jpeg"
           alt="Futuristic Avion academy technology environment"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#020711] via-[#020711]/82 to-[#020711]/22" />
@@ -379,6 +380,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      <GoogleReviews />
 
       <section className="section bg-white/[0.025]">
         <div className="container">

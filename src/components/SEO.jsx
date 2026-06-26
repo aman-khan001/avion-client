@@ -2,10 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const DEFAULT_TITLE =
-  "Best Python, MERN Stack & Web Development Training in Dewas | AVION Academy";
+  "AVION The Best AI/ML, Python & Web Dev Training in Dewas";
 
 const DEFAULT_DESCRIPTION =
-  "Get hands-on coding training, live projects, and 100% placement support. Enroll today to launch your tech career! Master Python, MERN Stack, Web Development, AI & Machine Learning with industry-focused training and placement assistance at AVION Training & Placement Centre.";
+  "Master AI/Ml, Full-Stack, Web Development with MERN stack. Get hands-on training, live projects, and 100% placement support. Join now and boost your career!";
 
 const DEFAULT_KEYWORDS =
   "AI/ML training institute near me, AVION TRAINING AND PLACEMENT CENTRE, BEST PROGRAMMING INSTITUTE IN DEWAS, AI/ML INSTITUTE IN DEWAS, AI COURSE IN DEWAS, Python Training Dewas, MERN Stack Training Dewas, Web Development Course Dewas, Django Training, React Training, AI Course Dewas, Machine Learning Course Dewas, Data Science Course Dewas, Full Stack Development Dewas, Programming Institute Dewas, Coding Bootcamp Dewas, Software Development Training Dewas, IT Training Institute Dewas, Career in Tech Dewas, Placement Assistance Dewas, Tech Skills Training Dewas, Online Programming Course Dewas, Web Development Bootcamp Dewas, UI/UX Design Course Dewas, Mobile App Development Course Dewas, Cloud Computing Training Dewas, Cybersecurity Course Dewas, DevOps Training Dewas, Digital Marketing Course Dewas, Software Engineering Course Dewas, IT Certification Courses Dewas, Tech Career Guidance Dewas, Coding Classes for Beginners Dewas, Advanced Programming Courses Dewas, Tech Workshops and Seminars Dewas";
