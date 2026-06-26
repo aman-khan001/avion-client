@@ -1,4 +1,4 @@
-import { orbitPosition, wrapAngle } from "./math";
+import { orbitPosition, wrapAngle } from "../math";
 
 export default class Orbit {
 
