@@ -1,33 +1,43 @@
-import { map } from "../utils/math";
+// src/components/OrbitEngine/engine/systems/DepthSystem.js
+
+import { clamp, lerp, normalize } from "../utils/math";
 
 export default class DepthSystem {
-  constructor(world) {
+  constructor(world, radius = 380) {
     this.world = world;
+    this.radius = radius;
+  }
+
+  setRadius(radius) {
+    this.radius = radius;
+    return this;
   }
 
   update() {
-    const objects = this.world.getObjects();
+    const objects = this.world?.getObjects?.() ?? [];
+    if (!objects.length) {
+      return this;
+    }
 
-    const radius = 380;
-    // export const EngineConfig = {
-    //   radius: 380,
-    //   speed: 0.003,
-    //   perspective: 1800,
-    //   minScale: 0.55,
-    //   maxScale: 1.15,
-    // };
+    const radius = this.radius;
+    const minZ = -radius;
+    const maxZ = radius;
 
     objects.forEach((object) => {
-      const z = object.position.z;
+      if (!object?.position || !object?.scale) {
+        return;
+      }
 
-      object.scale.x =
-        object.scale.y =
-        object.scale.z =
-          map(z, -radius, radius, 0.55, 1.15);
+      const depth = clamp(normalize(object.position.z, minZ, maxZ), 0, 1);
+      const scaleValue = lerp(0.55, 1.15, depth);
+      const opacityValue = lerp(0.35, 1, depth);
+      const blurValue = lerp(3, 0, depth);
 
-      object.opacity = map(z, -radius, radius, 0.35, 1);
-
-      object.blur = map(-z, -radius, radius, 0, 3);
+      object.scale.x = object.scale.y = object.scale.z = scaleValue;
+      object.opacity = opacityValue;
+      object.blur = blurValue;
     });
+
+    return this;
   }
 }
