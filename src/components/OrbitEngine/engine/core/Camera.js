@@ -1,4 +1,4 @@
-// engine/Camera.js
+// src/components/OrbitEngine/engine/core/Camera.js
 
 export default class Camera {
   constructor() {

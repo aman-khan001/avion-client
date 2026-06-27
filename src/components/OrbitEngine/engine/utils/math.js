@@ -1,4 +1,4 @@
-// src/components/OrbitEngine/engine/math.js
+// src/components/OrbitEngine/engine/utils/math.js
 
 export const TAU = Math.PI * 2;
 

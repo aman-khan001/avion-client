@@ -1,31 +1,29 @@
-// engine/core/World.js
+// src/components/OrbitEngine/engine/core/World.js
 
 export default class World {
+  constructor() {
+    this.objects = [];
+  }
 
-    constructor() {
-
-        this.objects = [];
-
+  add(object) {
+    if (object && !this.objects.includes(object)) {
+      this.objects.push(object);
     }
 
-    add(object) {
+    return this;
+  }
 
-        this.objects.push(object);
+  remove(object) {
+    const index = this.objects.indexOf(object);
 
+    if (index !== -1) {
+      this.objects.splice(index, 1);
     }
 
-    remove(object) {
+    return this;
+  }
 
-        this.objects = this.objects.filter(
-            item => item !== object
-        );
-
-    }
-
-    getObjects() {
-
-        return this.objects;
-
-    }
-
+  getObjects() {
+    return [...this.objects];
+  }
 }

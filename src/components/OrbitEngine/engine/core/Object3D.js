@@ -1,3 +1,5 @@
+// src/components/OrbitEngine/engine/core/Object3D.js
+
 export default class Object3D {
   constructor() {
     this.position = {
@@ -22,6 +24,10 @@ export default class Object3D {
     this.blur = 0;
 
     this.element = null;
+
+    this.visible = true;
+
+    this.userData = {};
   }
 
   attach(element) {
@@ -33,29 +39,28 @@ export default class Object3D {
   render() {
     if (!this.element) return;
 
-    this.element.style.transform = `
+    const transform = `
       translate3d(
-        ${this.position.x}px,
-        ${this.position.y}px,
-        ${this.position.z}px
+      ${this.position.x}px,
+      ${this.position.y}px,
+      ${this.position.z}px
       )
-
       rotateX(${this.rotation.x}deg)
-
       rotateY(${this.rotation.y}deg)
-
       rotateZ(${this.rotation.z}deg)
-
       scale3d(
-        ${this.scale.x},
-        ${this.scale.y},
-        ${this.scale.z}
+      ${this.scale.x},
+      ${this.scale.y},
+      ${this.scale.z}
       )
     `;
 
+    this.element.style.transform = transform;
+
     this.element.style.opacity = this.opacity;
 
-    this.element.style.filter =
-      `blur(${this.blur}px)`;
+    const filter = `blur(${this.blur}px)`;
+
+    this.element.style.filter = filter;
   }
 }
