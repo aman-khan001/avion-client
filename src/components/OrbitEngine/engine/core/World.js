@@ -23,6 +23,11 @@ export default class World {
     return this;
   }
 
+  clear() {
+    this.objects.length = 0;
+    return this;
+  }
+
   getObjects() {
     return [...this.objects];
   }

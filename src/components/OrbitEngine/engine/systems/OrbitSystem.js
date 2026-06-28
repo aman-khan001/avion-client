@@ -1,37 +1,29 @@
 // src/components/OrbitEngine/engine/systems/OrbitSystem.js
 
-import { orbitPosition, radToDeg, wrapAngle } from "../math";
+import { orbitPosition, radToDeg, wrapAngle } from "../utils/math";
 
 const RAD_TO_DEG = radToDeg(1);
 
 export default class OrbitSystem {
-  constructor(radius = 380) {
+  constructor(world, radius = 380) {
+    this.world = world;
     this.radius = radius;
     this.rotation = 0;
     this.speed = 0.5; // radians per second
-    this.objects = [];
   }
 
   add(object) {
-    if (object && !this.objects.includes(object)) {
-      this.objects.push(object);
-    }
-
+    this.world?.add?.(object);
     return this;
   }
 
   remove(object) {
-    const index = this.objects.indexOf(object);
-
-    if (index !== -1) {
-      this.objects.splice(index, 1);
-    }
-
+    this.world?.remove?.(object);
     return this;
   }
 
   clear() {
-    this.objects.length = 0;
+    this.world?.clear?.();
     return this;
   }
 
@@ -51,15 +43,17 @@ export default class OrbitSystem {
   }
 
   update(delta = 1) {
-    if (!this.objects.length) {
+    const objects = this.world?.getObjects?.() ?? [];
+
+    if (!objects.length) {
       return this;
     }
 
     this.rotation = wrapAngle(this.rotation + this.speed * delta);
 
-    const step = (Math.PI * 2) / this.objects.length;
+    const step = (Math.PI * 2) / objects.length;
 
-    this.objects.forEach((object, i) => {
+    objects.forEach((object, i) => {
       if (!object?.position || !object?.rotation) {
         return;
       }
