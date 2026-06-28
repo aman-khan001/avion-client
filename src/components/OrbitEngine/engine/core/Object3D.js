@@ -55,9 +55,13 @@ export default class Object3D {
       )
     `;
 
-    this.element.style.transform = transform;
+    const zIndex = Number.isFinite(this.position.z)
+      ? Math.round(this.position.z)
+      : 0;
 
+    this.element.style.transform = transform;
     this.element.style.opacity = this.opacity;
+    this.element.style.zIndex = String(zIndex);
 
     const filter = `blur(${this.blur}px)`;
 

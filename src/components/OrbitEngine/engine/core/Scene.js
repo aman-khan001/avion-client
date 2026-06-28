@@ -2,50 +2,41 @@
 
 export default class Scene {
   constructor() {
-    this.objects = [];
     this.running = false;
+
     this.lastTime = 0;
+
     this.animationId = null;
+
+    this.onUpdate = null;
 
     this.update = this.update.bind(this);
   }
 
-  add(object) {
-    if (object && !this.objects.includes(object)) {
-      this.objects.push(object);
-    }
-
-    return this;
-  }
-
-  remove(object) {
-    const index = this.objects.indexOf(object);
-
-    if (index !== -1) {
-      this.objects.splice(index, 1);
-    }
-
-    return this;
-  }
-
   start() {
-    if (this.running) return;
+    if (this.running) return this;
 
     this.running = true;
+
     this.lastTime = 0;
 
     this.animationId = requestAnimationFrame(this.update);
+
+    return this;
   }
 
   stop() {
-    if (!this.running) return;
+    if (!this.running) return this;
 
     this.running = false;
 
     if (this.animationId !== null) {
       cancelAnimationFrame(this.animationId);
+
       this.animationId = null;
     }
+
+    return this;
   }
 
   update(time) {
@@ -62,15 +53,9 @@ export default class Scene {
 
     this.lastTime = time;
 
-    this.objects.forEach((object) => {
-      if (object?.update) {
-        object.update(delta);
-      }
-
-      if (object?.render) {
-        object.render();
-      }
-    });
+    if (typeof this.onUpdate === "function") {
+      this.onUpdate(delta);
+    }
 
     this.animationId = requestAnimationFrame(this.update);
   }
