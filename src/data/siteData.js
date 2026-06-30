@@ -12,7 +12,7 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
-  UsersRound
+  UsersRound,
 } from "lucide-react";
 
 export const courses = [
@@ -24,7 +24,13 @@ export const courses = [
     instructor: "Aman Khan",
     icon: BrainCircuit,
     level: "Advanced",
-    syllabus: ["Python", "Data Science & Data Analytics", "Automation", "DSA/MySQL", "AI/ML"]
+    syllabus: [
+      "Python",
+      "Data Science & Data Analytics",
+      "Automation",
+      "DSA/MySQL",
+      "AI/ML",
+    ],
   },
   {
     title: "Complete FullStack Development",
@@ -34,7 +40,16 @@ export const courses = [
     instructor: "Aman Khan",
     icon: BarChart3,
     level: "Advanced",
-    syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "MERN Stack", "NextJs", "GIT/GITHUB", "Deployment"]
+    syllabus: [
+      "HTML/CSS",
+      "JavaScript ES6+",
+      "Tailwind CSS",
+      "TypeScript",
+      "MERN Stack",
+      "NextJs",
+      "GIT/GITHUB",
+      "Deployment",
+    ],
     // syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "ReactJS + Redux", "NodeJs", "MongoDB", "ExpressJs", "NextJs", "GIT/GITHUB", "Deployment"]
   },
   {
@@ -45,7 +60,7 @@ export const courses = [
     instructor: "Kalpana Yadav",
     icon: BookOpenCheck,
     level: "Beginner",
-    syllabus: ["Core Python", "OOP", "Files Handling", "Advanced Python"]
+    syllabus: ["Core Python", "OOP", "Files Handling", "Advanced Python"],
   },
   {
     title: "Django",
@@ -55,7 +70,7 @@ export const courses = [
     instructor: "Django Mentor",
     icon: ShieldCheck,
     level: "Intermediate",
-    syllabus: ["Django", "DRF", "Auth", "Cloud Deploy"]
+    syllabus: ["Django", "DRF", "Auth", "Cloud Deploy"],
   },
   {
     title: "Computer Skills",
@@ -65,7 +80,14 @@ export const courses = [
     instructor: "Foundation Trainer",
     icon: GraduationCap,
     level: "Beginner",
-    syllabus: ["MS Office", "Typing", "Operating System Guide", "Email", "Internet", "Canva"]
+    syllabus: [
+      "MS Office",
+      "Typing",
+      "Operating System Guide",
+      "Email",
+      "Internet",
+      "Canva",
+    ],
   },
   {
     title: "Digital Marketing",
@@ -75,84 +97,131 @@ export const courses = [
     instructor: "Kalpana Yadav",
     icon: Megaphone,
     level: "Beginner",
-    syllabus: ["SEO", "Ads", "Analytics", "Campaigns"]
-  }
+    syllabus: ["SEO", "Ads", "Analytics", "Campaigns"],
+  },
 ];
 
 export const whyChoose = [
-  { title: "Industry Projects", text: "Portfolio-first learning with deployable products.", icon: Rocket },
-  { title: "Placement Cell", text: "Interview prep, company connects, and progress tracking.", icon: BriefcaseBusiness },
-  { title: "Modern LMS", text: "Notes, assignments, certificates, and quizzes in one portal.", icon: Sparkles },
-  { title: "Mentor Support", text: "Small batches, weekly reviews, and practical mentorship.", icon: UsersRound }
+  {
+    title: "Industry Projects",
+    text: "Portfolio-first learning with deployable products.",
+    icon: Rocket,
+  },
+  {
+    title: "Placement Cell",
+    text: "Interview prep, company connects, and progress tracking.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Modern LMS",
+    text: "Notes, assignments, certificates, and quizzes in one portal.",
+    icon: Sparkles,
+  },
+  {
+    title: "Mentor Support",
+    text: "Small batches, weekly reviews, and practical mentorship.",
+    icon: UsersRound,
+  },
 ];
 
 export const stats = [
   { label: "Placement Support", value: "100%" },
   { label: "Career Courses", value: "09" },
   { label: "Hiring Partners", value: "75+" },
-  { label: "Practice Quizzes", value: "1.2k+" }
+  { label: "Practice Quizzes", value: "1.2k+" },
 ];
 
 export const stories = [
   {
     name: "Ayesha Khan",
     role: "MERN Developer",
-    quote: "Avion helped me move from tutorials to real projects and interviews with confidence."
+    quote:
+      "Avion helped me move from tutorials to real projects and interviews with confidence.",
   },
   {
     name: "Rohan Patel",
     role: "Data Analyst",
-    quote: "The dashboards, assignments, and mock interview routine made the placement journey clear."
+    quote:
+      "The dashboards, assignments, and mock interview routine made the placement journey clear.",
   },
   {
     name: "Meera Nair",
     role: "Python Intern",
-    quote: "The batch structure was focused, modern, and genuinely practical from week one."
-  }
+    quote:
+      "The batch structure was focused, modern, and genuinely practical from week one.",
+  },
 ];
 
 export const batches = [
   { course: "MERN Stack", date: "01 Jul 2026", mode: "Offline", seats: 8 },
   { course: "AI & ML", date: "08 Jul 2026", mode: "Hybrid", seats: 12 },
-  { course: "Digital Marketing", date: "15 Jul 2026", mode: "Online", seats: 10 }
+  {
+    course: "Digital Marketing",
+    date: "15 Jul 2026",
+    mode: "Online",
+    seats: 10,
+  },
 ];
 
 export const quizRankings = [
   { rank: 1, name: "Prince V", points: 980 },
   { rank: 2, name: "Zikra K", points: 940 },
-  { rank: 3, name: "Mansi V", points: 890 }
+  { rank: 3, name: "Mansi V", points: 890 },
 ];
 
 export const team = [
-  { name: "Aman Khan", role: "Director & Tech Head", skills: "AI/ML, Python, React, Node, MongoDB", exp: "7 yrs", media: "/assets/aman-khan.png" },
-  { name: "Kalpana Yadav", role: "Manager & Mentor", skills: "Digital Marketing, Python, Web Development", exp: "5 yrs", media: "/assets/kalpana-yadav.png" },
-  { name: "Ravi Dubey", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "8 yrs", media: "/assets/ravi-dubey.png" },
-  { name: "Asjad Qadri", role: "Placement Coordinator", skills: "Shopify, HR, Aptitude, Interviews", exp: "6 yrs", media: "/assets/asjad-qadri.png" }
+  {
+    name: "Aman Khan",
+    role: "Director & Tech Head",
+    skills: "AI/ML, Python, React, Node, MongoDB",
+    exp: "7 yrs",
+    media: "/assets/aman-khan.jpg",
+  },
+  {
+    name: "Kalpana Yadav",
+    role: "Manager & Mentor",
+    skills: "Digital Marketing, Python, Web Development",
+    exp: "5 yrs",
+    media: "/assets/kalpana-mam.png",
+  },
+  {
+    name: "Ravi Dubey",
+    role: "Placement Coordinator",
+    skills: "Shopify, HR, Aptitude, Interviews",
+    exp: "8 yrs",
+    media: "/assets/ravi-dubey.jpeg",
+  },
+  {
+    name: "Asjad Qadri",
+    role: "Placement Coordinator",
+    skills: "Shopify, HR, Aptitude, Interviews",
+    exp: "6 yrs",
+    media: "/assets/asjad-qadri.png",
+  },
 ];
 
 export const gallery = [
   {
     title: "AI Workshop",
     type: "Workshop",
-    media: "/assets/gallery1.png"
+    media: "/assets/gallery1.png",
   },
   {
     title: "Web Development Bootcamp",
     type: "Workshop",
-    media: "/assets/gallery2.png"
+    media: "/assets/gallery2.png",
   },
   {
     title: "Student Hackathon",
     type: "Event",
-    media: "/assets/gallery3.png"
+    media: "/assets/gallery3.png",
   },
   {
     title: "Placement Drive",
     type: "Event",
-    media: "/assets/gallery.png"
+    media: "/assets/gallery.png",
   },
 ];
-
 
 export const adminChartData = [
   { month: "Jan", students: 36, revenue: 1.8 },
@@ -160,7 +229,7 @@ export const adminChartData = [
   { month: "Mar", students: 62, revenue: 3.1 },
   { month: "Apr", students: 78, revenue: 4.2 },
   { month: "May", students: 92, revenue: 5.1 },
-  { month: "Jun", students: 116, revenue: 6.8 }
+  { month: "Jun", students: 116, revenue: 6.8 },
 ];
 
 export const navLinks = [
@@ -170,11 +239,11 @@ export const navLinks = [
   { label: "Team", to: "/team" },
   { label: "Placements", to: "/placements" },
   { label: "Blog", to: "/blog" },
-  { label: "Contact", to: "/contact" }
+  { label: "Contact", to: "/contact" },
 ];
 
 export const achievements = [
   { title: "Career-focused curriculum", icon: Target },
   { title: "Verified student lifecycle", icon: BadgeCheck },
-  { title: "1000+ student-ready architecture", icon: UsersRound }
+  { title: "1000+ student-ready architecture", icon: UsersRound },
 ];

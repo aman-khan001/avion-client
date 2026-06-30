@@ -44,17 +44,17 @@ export default function Home() {
             <p className="section-eyebrow">
               AVION Academy | Programming Training in Dewas
             </p>
-            <h1 className="mt-5 max-w-xl text-[clamp(2rem,6vw,5.2rem)] font-black leading-[0.95] text-white">
-              Best AI/ML & Web Development Training Centre in Dewas
+            <h1 className="mt-5 max-w-xl text-[clamp(1.8rem,5vw,4.4rem)] font-black leading-[0.95] text-white">
+              Best AI/ML & Web Development Training in Dewas
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              AVION Academy in Dewas helps students learn practical coding
-              skills, build real-world projects, and gain placement support in
-              high-demand fields like Python, MERN Stack, web development,
-              AI/ML, and digital marketing. 
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+              Learn practical coding, build real projects, and get placement
+              support in Python, MERN, web development, AI/ML, and digital
+              marketing.
             </p>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-              We offer both online and offline courses with hands-on projects, career guidance, and placement support to help students secure jobs in the tech industry.
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
+              We offer online and offline training with guidance that helps
+              students move from learning to career-ready confidence.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/register" className="btn btn-primary">
@@ -71,7 +71,6 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
-          
         </div>
       </section>
 
@@ -380,7 +379,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <GoogleReviews />
 

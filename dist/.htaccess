@@ -1,0 +1,13 @@
+# Redirect requests for nonexistent files to index.html for React Router SPA support
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If the requested file or directory exists, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise serve index.html
+  RewriteRule ^ index.html [L]
+</IfModule>

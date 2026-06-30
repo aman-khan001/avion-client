@@ -23,7 +23,10 @@ export default function Courses() {
             {courses.map((course) => {
               const Icon = course.icon;
               return (
-                <GlassCard className="flex flex-col p-6" key={course.title}>
+                <GlassCard
+                  className="flex h-full min-h-[470px] flex-col p-6"
+                  key={course.title}
+                >
                   <div className="flex items-center justify-between">
                     <Icon className="text-avion-green" size={34} />
                     <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
@@ -37,7 +40,7 @@ export default function Courses() {
                   <p className="mt-2 text-sm text-avion-green">
                     Instructor: {course.instructor}
                   </p>
-                  <ul className="mt-4 grid gap-2 text-sm text-white/60">
+                  <ul className="mt-4 grid flex-1 gap-2 text-sm text-white/60">
                     {course.syllabus.map((item) => (
                       <li className="flex items-center gap-2" key={item}>
                         <CheckCircle2 size={16} className="text-avion-green" />
@@ -49,7 +52,7 @@ export default function Courses() {
                     {course.description}
                   </p>
                   <Link
-                    className="btn btn-primary mt-7 justify-center"
+                    className="btn btn-primary mt-auto justify-center"
                     to="/register"
                   >
                     Enroll
