@@ -28,8 +28,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
           protocol: ftps
+          port: 21
+          security: loose
           local-dir: ./dist/
           server-dir: ./domains/avionacademy.co.in/public_html/
           dangerous-clean-slate: true
