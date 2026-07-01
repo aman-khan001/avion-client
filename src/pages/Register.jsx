@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { BadgePlus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { z } from "zod";
 import GlassCard from "../components/GlassCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
@@ -284,6 +284,13 @@ export default function Register() {
                   {error}
                 </p>
               ) : null}
+              <p className="text-sm text-white/60">
+                By submitting this form, you agree to our{" "}
+                <Link to="/terms" className="text-avion-green underline">
+                  Terms & Conditions
+                </Link>
+                .
+              </p>
               <button
                 className="btn btn-primary justify-center"
                 type="submit"

@@ -7,10 +7,10 @@ import SEO from "../components/SEO.jsx";
 export default function Team() {
   return (
     <>
-    <SEO
-      title="Our Team | Avion Training & Placement Centre"
-      description="Meet the dedicated professionals behind our training programs. Our team of trainers, mentors, and coordinators are committed to helping students achieve their career goals in the tech industry."
-    />
+      <SEO
+        title="Our Team | Avion Training & Placement Centre"
+        description="Meet the dedicated professionals behind our training programs. Our team of trainers, mentors, and coordinators are committed to helping students achieve their career goals in the tech industry."
+      />
       <section className="section">
         <div className="container">
           <SectionHeading
@@ -24,7 +24,7 @@ export default function Team() {
                 <img
                   src={member.media}
                   alt={member.name}
-                  className="h-[150px] w-[100%] rounded-lg object-cover"
+                  className="h-60 w-full rounded-lg bg-[#020711] object-contain object-center"
                 />
                 <h3 className="mt-6 text-2xl font-black">{member.name}</h3>
                 <p className="text-avion-green">{member.role}</p>

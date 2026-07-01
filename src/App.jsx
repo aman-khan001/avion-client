@@ -14,6 +14,7 @@ import Placements from "./pages/Placements.jsx";
 import Register from "./pages/Register.jsx";
 import StudentDashboard from "./pages/StudentDashboard.jsx";
 import Students from "./pages/Students.jsx";
+import Terms from "./pages/Terms.jsx";
 import Team from "./pages/Team.jsx";
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="terms" element={<Terms />} />
         <Route
           path="student/dashboard"
           element={

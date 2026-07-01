@@ -84,6 +84,7 @@ export default function Footer() {
             <Link to="/placements">Placements</Link>
             <Link to="/gallery">Gallery</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/terms">Terms & Conditions</Link>
           </div>
         </div>
         <div>
