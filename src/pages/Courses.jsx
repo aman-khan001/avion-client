@@ -23,41 +23,45 @@ export default function Courses() {
             {courses.map((course) => {
               const Icon = course.icon;
               return (
-                <GlassCard
-                  className="flex h-full min-h-[470px] flex-col p-6"
+                <Link
+                  to={`/courses/${course.slug}`}
+                  className="block h-full"
                   key={course.title}
                 >
-                  <div className="flex items-center justify-between">
-                    <Icon className="text-avion-green" size={34} />
-                    <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                      {course.category}
+                  <GlassCard className="flex h-full min-h-[470px] flex-col p-6">
+                    <div className="flex items-center justify-between">
+                      <Icon className="text-avion-green" size={34} />
+                      <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                        {course.category}
+                      </span>
+                    </div>
+                    <h3 className="mt-6 text-2xl font-black">{course.title}</h3>
+                    <p className="mt-2 text-sm text-white/60">
+                      {course.duration} · {course.fee}
+                    </p>
+                    <p className="mt-2 text-sm text-avion-green">
+                      Instructor: {course.instructor}
+                    </p>
+                    <ul className="mt-4 grid flex-1 gap-2 text-sm text-white/60">
+                      {course.syllabus.map((item) => (
+                        <li className="flex items-center gap-2" key={item}>
+                          <CheckCircle2
+                            size={16}
+                            className="text-avion-green"
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-4 text-sm text-white/45">
+                      {course.description}
+                    </p>
+                    <div className="mt-6" />
+                    <span className="btn btn-primary mt-auto justify-center">
+                      View details
                     </span>
-                  </div>
-                  <h3 className="mt-6 text-2xl font-black">{course.title}</h3>
-                  <p className="mt-2 text-sm text-white/60">
-                    {course.duration} · {course.fee}
-                  </p>
-                  <p className="mt-2 text-sm text-avion-green">
-                    Instructor: {course.instructor}
-                  </p>
-                  <ul className="mt-4 grid flex-1 gap-2 text-sm text-white/60">
-                    {course.syllabus.map((item) => (
-                      <li className="flex items-center gap-2" key={item}>
-                        <CheckCircle2 size={16} className="text-avion-green" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 text-sm text-white/45">
-                    {course.description}
-                  </p>
-                  <Link
-                    className="btn btn-primary mt-auto justify-center"
-                    to="/register"
-                  >
-                    Enroll
-                  </Link>
-                </GlassCard>
+                  </GlassCard>
+                </Link>
               );
             })}
           </div>

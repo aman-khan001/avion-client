@@ -5,6 +5,7 @@ import About from "./pages/About.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
 import Blog from "./pages/Blog.jsx";
 import Contact from "./pages/Contact.jsx";
+import CourseDetails from "./pages/CourseDetails.jsx";
 import Courses from "./pages/Courses.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Home from "./pages/Home.jsx";
@@ -22,6 +23,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="courses" element={<Courses />} />
+        <Route path="courses/:slug" element={<CourseDetails />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="team" element={<Team />} />
         <Route path="placements" element={<Placements />} />

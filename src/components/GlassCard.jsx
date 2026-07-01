@@ -5,6 +5,7 @@ export default function GlassCard({ children, className = "", delay = 0 }) {
     <motion.div
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -4, scale: 1.01, transition: { duration: 0.2 } }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.55, delay }}
       className={`glass-card ${className}`}

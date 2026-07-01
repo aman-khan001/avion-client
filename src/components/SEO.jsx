@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
+const SITE_NAME = "AVION Academy";
 const DEFAULT_TITLE =
-  "AVION The Best AI/ML, Python & Web Dev Training in Dewas";
+  "AVION | The Best AI/ML, Python & Web Dev Training in Dewas";
 
 const DEFAULT_DESCRIPTION =
   "Master AI/Ml, Full-Stack, Web Development with MERN stack. Get hands-on training, live projects, and 100% placement support. Join now and boost your career!";
@@ -21,15 +22,18 @@ function SEO({
   const location = useLocation();
 
   const siteUrl = import.meta.env.VITE_SITE_URL || "https://avionacademy.co.in";
-
-  const canonicalUrl = `${siteUrl}${location.pathname}`;
-
-  const imageUrl = image.startsWith("http") ? image : `${siteUrl}${image}`;
+  const canonicalUrl = new URL(location.pathname, siteUrl).toString();
+  const imageUrl = image.startsWith("http")
+    ? image
+    : new URL(image, siteUrl).toString();
+  const pageTitle = title.includes(SITE_NAME)
+    ? title
+    : `${title} | ${SITE_NAME}`;
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "AVION Academy",
+    name: SITE_NAME,
     alternateName: "Avion Training and Placement Centre",
     url: siteUrl,
     description,
@@ -51,6 +55,20 @@ function SEO({
     ],
   };
 
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: canonicalUrl,
+    name: pageTitle,
+    description,
+    inLanguage: "en-IN",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: siteUrl,
+    },
+  };
+
   const faqSchema = faqItems.length
     ? {
         "@context": "https://schema.org",
@@ -69,7 +87,7 @@ function SEO({
   return (
     <Helmet>
       {/* Basic SEO */}
-      <title>{title}</title>
+      <title>{pageTitle}</title>
 
       <link
         rel="apple-touch-icon"
@@ -102,6 +120,8 @@ function SEO({
 
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="author" content="AVION Academy" />
+      <meta name="theme-color" content="#020711" />
 
       <meta
         name="robots"
@@ -109,26 +129,32 @@ function SEO({
       />
 
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" href={canonicalUrl} hrefLang="x-default" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="AVION Academy" />
-      <meta property="og:title" content={title} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:alt" content={description} />
+      <meta property="og:locale" content="en_IN" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:site" content="@AvionAcademy" />
+      <meta name="twitter:creator" content="@AvionAcademy" />
 
       {/* Mobile */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       {/* Schema */}
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       {faqSchema ? (
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       ) : null}

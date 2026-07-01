@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  BadgeCheck,
+  BrainCircuit,
   CalendarDays,
   ChevronRight,
   PlayCircle,
+  Sparkles,
   Trophy,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -27,24 +30,28 @@ export default function Home() {
     <>
       <SEO />
 
-      <section className="relative min-h-[92vh] overflow-hidden">
+      <section className="relative isolate min-h-[92vh] overflow-hidden">
         <div className="hero-grid absolute inset-0 z-0" />
         <img
-          className="absolute inset-0 h-full w-full object-fit "
+          className="absolute inset-0 h-full w-full object-cover opacity-70"
           src="/assets/avion-hero.jpeg"
           alt="Futuristic Avion academy technology environment"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020711] via-[#020711]/82 to-[#020711]/22" />
-        <div className="container relative z-10 grid min-h-[92vh] items-center gap-10 py-16 lg:grid-cols-[1fr_0.75fr]">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020711] via-[#020711]/90 to-[#020711]/25" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(159,239,0,0.16),transparent_36%)]" />
+        <div className="container relative z-10 grid min-h-[92vh] items-center gap-10 py-20 lg:grid-cols-[1.08fr_0.92fr]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="section-eyebrow">
+            <div className="inline-flex items-center gap-2 rounded-full border border-avion-green/30 bg-avion-green/10 px-3 py-1 text-sm font-semibold text-avion-green">
+              <Sparkles size={14} /> Trusted tech training in Dewas
+            </div>
+            <p className="mt-6 section-eyebrow">
               AVION Academy | Programming Training in Dewas
             </p>
-            <h1 className="mt-5 max-w-xl text-[clamp(1.8rem,5vw,4.4rem)] font-black leading-[0.95] text-white">
+            <h1 className="mt-4 max-w-xl text-[clamp(1.8rem,5vw,4.4rem)] font-black leading-[0.95] text-white">
               Best AI/ML & Web Development Training in Dewas
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
@@ -66,9 +73,74 @@ export default function Home() {
               <Link to="/courses" className="btn btn-ghost">
                 Explore Courses <ChevronRight size={18} />
               </Link>
-              <Link to="/placements" className="btn btn-ghost">
-                Placement Support <ChevronRight size={18} />
-              </Link>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/70">
+              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">
+                Live projects
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">
+                1:1 mentorship
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">
+                Placement guidance
+              </span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="rounded-[30px] border border-white/10 bg-[#020711]/70 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl"
+          >
+            <p className="section-eyebrow">Why learners choose AVION</p>
+            <div className="mt-5 grid gap-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div className="flex items-center gap-3">
+                  <div className="rounded-2xl bg-avion-green/15 p-2 text-avion-green">
+                    <BrainCircuit size={18} />
+                  </div>
+                  <div>
+                    <p className="font-black text-white">
+                      Career-first curriculum
+                    </p>
+                    <p className="mt-1 text-sm text-white/60">
+                      Practical modules aligned to real job expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div className="flex items-center gap-3">
+                  <div className="rounded-2xl bg-avion-green/15 p-2 text-avion-green">
+                    <BadgeCheck size={18} />
+                  </div>
+                  <div>
+                    <p className="font-black text-white">
+                      Mentorship that stays with you
+                    </p>
+                    <p className="mt-1 text-sm text-white/60">
+                      Guidance from onboarding to interview readiness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 rounded-2xl border border-avion-green/20 bg-avion-green/10 p-4">
+              <div className="flex items-center gap-3">
+                <div className="rounded-2xl bg-avion-green/20 p-2 text-avion-green">
+                  <BadgeCheck size={18} />
+                </div>
+                <div>
+                  <p className="font-black text-white">
+                    Placement-first support
+                  </p>
+                  <p className="mt-1 text-sm text-white/65">
+                    Resume reviews, mock interviews, and company-connect prep
+                    all included.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -130,131 +202,39 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <GlassCard className="flex flex-col p-6 hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
-              <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                  Web Development
-                </span>
-              </div>
-              <h3 className="mt-6 text-2xl font-black">
-                Full Stack Web Development
-              </h3>
-              <p className="mt-2 text-sm text-white/60">
-                Duration: 9 months · Fee: ₹3000/month
-              </p>
-              <p className="mt-4 text-sm text-white/45">
-                Learn to build dynamic web applications using the MERN stack.
-                Gain hands-on experience with real-world projects and prepare
-                for a career in web development.
-              </p>
-
-              {/* <Link
-                className="btn btn-primary mt-7 justify-center"
-                to="/register"
-              >
-                Enroll
-              </Link> */}
-            </GlassCard>
-            <GlassCard className="flex flex-col p-6 hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
-              <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                  AI/ML
-                </span>
-              </div>
-              <h3 className="mt-6 text-2xl font-black">
-                AI & Machine Learning
-              </h3>
-              <p className="mt-2 text-sm text-white/60">
-                Duration: 5 months · Fee: ₹3,500
-              </p>
-              <p className="mt-4 text-sm text-white/45">
-                Dive into the world of artificial intelligence and machine
-                learning. Learn algorithms, data processing, and model building
-                to create intelligent applications.
-              </p>
-            </GlassCard>
-            <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out  ">
-              <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                  Python
-                </span>
-              </div>
-              <h3 className="mt-6 text-2xl font-black">
-                Python Core + Advanced
-              </h3>
-              <p className="mt-2 text-sm text-white/60">
-                Duration: 4 months · Fee: ₹10,000
-              </p>
-              <p className="mt-4 text-sm text-white/45">
-                Master Python programming from basics to advanced concepts.
-                Build projects and enhance your coding skills for various
-                applications in software development and data science.
-              </p>
-            </GlassCard>
-            <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
-              <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                  Digital Marketing
-                </span>
-              </div>
-              <h3 className="mt-6 text-2xl font-black">Digital Marketing</h3>
-              <p className="mt-2 text-sm text-white/60">
-                Duration: 3 months · Fee: ₹12,000
-              </p>
-              <p className="mt-4 text-sm text-white/45">
-                Learn the fundamentals of digital marketing, including SEO,
-                social media marketing, content creation, and analytics. Gain
-                practical skills to promote businesses online effectively.
-              </p>
-            </GlassCard>
-            <GlassCard className="flex flex-col p-6  hover:shadow-lg hover:shadow-avion-green/30 transition duration-300 ease-in-out ">
-              <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
-                  Shopify Development
-                </span>
-              </div>
-              <h3 className="mt-6 text-2xl font-black">Shopify Development</h3>
-              <p className="mt-2 text-sm text-white/60">
-                Duration: 2 months · Fee: ₹8,000
-              </p>
-              <p className="mt-4 text-sm text-white/45">
-                Learn to create and customize e-commerce websites using Shopify.
-                Understand the platform's features, themes, and apps to build
-                online stores that drive sales and enhance user experience.
-              </p>
-            </GlassCard>
-
-            {/* {courses.slice(0, 6).map((course, index) => {
+            {courses.slice(0, 3).map((course, index) => {
               const Icon = course.icon;
               return (
-                <GlassCard
-                  className="p-6"
-                  delay={index * 0.05}
+                <Link
+                  to={`/courses/${course.slug}`}
+                  className="block h-full"
                   key={course.title}
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <Icon className="text-avion-green" size={30} />
-                    <span className="rounded-lg border border-white/10 px-3 py-1 text-xs text-white/70">
-                      {course.level}
-                    </span>
-                  </div>
-                  <h3 className="mt-5 text-2xl font-black">{course.title}</h3>
-                  <p className="mt-2 text-sm text-white/55">
-                    {course.duration} · {course.fee}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {course.syllabus.map((item) => (
-                      <span
-                        className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60"
-                        key={item}
-                      >
-                        {item}
+                  <GlassCard
+                    className="flex h-full flex-col p-6"
+                    delay={index * 0.05}
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <Icon className="text-avion-green" size={30} />
+                      <span className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/60">
+                        {course.category}
                       </span>
-                    ))}
-                  </div>
-                </GlassCard>
+                    </div>
+                    <h3 className="mt-6 text-2xl font-black">{course.title}</h3>
+                    <p className="mt-2 text-sm text-white/60">
+                      {course.duration} · {course.fee}
+                    </p>
+                    <p className="mt-4 flex-1 text-sm text-white/45">
+                      {course.description}
+                    </p>
+                    <div className="mt-6" />
+                    <span className="btn btn-primary mt-6 justify-center">
+                      View details
+                    </span>
+                  </GlassCard>
+                </Link>
               );
-            })} */}
+            })}
           </div>
         </div>
       </section>
@@ -459,66 +439,87 @@ export default function Home() {
         </div>
       </section>
       <section className="section">
-        <section className="text-gray-600 body-font relative">
-          <div className="absolute inset-0 bg-gray-300">
-            <iframe
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.787105145875!2d76.04302710000002!3d22.958066400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396317ae06154b81%3A0x7f58587c081a0079!2sAvion%20Training%20and%20Placement%20Centre!5e0!3m2!1sen!2sin!4v1782108188946!5m2!1sen!2sin"
-              loading="lazy"
-              className="filter grayscale contrast(1.3) opacity(0.4)"
-            ></iframe>
-          </div>
-          <div class="container px-5 py-24 mx-auto flex">
-            <div class="lg:w-1/3 md:w-1/2 bg-gray-700 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-              <h2 class="text-gray-50 text-lg mb-1 font-medium title-font">
-                Feedback
-              </h2>
-              <p class="leading-relaxed text-[12px] mb-5 text-gray-200">
-                Avion Training & Placement Centre is committed to providing the
-                best learning experience. We value your feedback and suggestions
-                to improve our services.
-              </p>
-              <div class="relative mb-4">
-                <label for="email" class="leading-7 text-sm text-gray-200">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
+        <div className="container">
+          <GlassCard className="overflow-hidden border-white/10">
+            <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
+              <div className="relative min-h-[320px] overflow-hidden">
+                <iframe
+                  title="Avion Training and Placement Centre location"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  marginHeight="0"
+                  marginWidth="0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.787105145875!2d76.04302710000002!3d22.958066400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396317ae06154b81%3A0x7f58587c081a0079!2sAvion%20Training%20and%20Placement%20Centre!5e0!3m2!1sen!2sin!4v1782108188946!5m2!1sen!2sin"
+                  loading="lazy"
+                  className="h-full w-full border-0 grayscale contrast-125 opacity-70"
+                ></iframe>
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(2,7,17,0.85),rgba(2,7,17,0.25))]" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <a
+                    href="https://www.google.com/maps/place/Avion+Training+and+Placement+Centre/@22.9580664,76.0430271,17z/data=!3m1!4b1!4m5!3m4!1s0x396317ae06154b81:0x7f58587c081a0079!8m2!3d22.9580664!4d76.0430271"
+                    className=" font-sans font-bold text-[2rem] text-[#9fef00] hover:text-green-400 animate-pulse "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit us
+                  </a>
+                  <h3 className="mt-3 text-2xl font-black text-white">
+                    A campus-like learning environment in Dewas
+                  </h3>
+                  <p className="mt-2 max-w-md text-sm leading-7 text-white/70">
+                    Drop by for a counselling session, demo class, or simply to
+                    experience our learning spaces.
+                  </p>
+                </div>
               </div>
-              <div class="relative mb-4">
-                <label for="message" class="leading-7 text-sm text-gray-200">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Enter your message"
-                  class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                ></textarea>
+
+              <div className="p-7 md:p-8">
+                <p className="section-eyebrow">Feedback</p>
+                <h3 className="mt-3 text-2xl font-black text-white">
+                  Tell us how we can make your learning journey better.
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-white/60">
+                  We value suggestions from students and parents and use them to
+                  improve every batch.
+                </p>
+                <form className="mt-6 space-y-4">
+                  <div>
+                    <label className="label" htmlFor="email">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      className="input"
+                    />
+                  </div>
+                  <div>
+                    <label className="label" htmlFor="message">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message"
+                      className="textarea"
+                    ></textarea>
+                  </div>
+                  <button type="button" className="btn btn-primary">
+                    Send Feedback
+                  </button>
+                  <p className="text-xs leading-6 text-white/45">
+                    We respect your privacy. Your email and message will be kept
+                    confidential and used solely for the purpose of improving
+                    our services.
+                  </p>
+                </form>
               </div>
-              <button
-                class="btn btn-primary"
-                style={{ textAlign: "center !important" }}
-              >
-                Send Feedback
-              </button>
-              <p class="text-[10px] text-gray-300 mt-3">
-                We respect your privacy. Your email and message will be kept
-                confidential and used solely for the purpose of improving our
-                services.
-              </p>
             </div>
-          </div>
-        </section>
+          </GlassCard>
+        </div>
       </section>
     </>
   );

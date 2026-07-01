@@ -1,9 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQuery } from "@tanstack/react-query";
 import { BadgePlus } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { z } from "zod";
 import GlassCard from "../components/GlassCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
@@ -49,15 +49,26 @@ export default function Register() {
   const [successMessage, setSuccessMessage] = useState("");
   const setSession = useAuthStore((state) => state.setSession);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
   });
   const [uploading, setUploading] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const selectedCourse = params.get("course");
+
+    if (selectedCourse) {
+      setValue("course", selectedCourse);
+    }
+  }, [location.search, setValue]);
 
   async function onSubmit(values) {
     setUploading(true);

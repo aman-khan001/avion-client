@@ -18,12 +18,27 @@ import {
 export const courses = [
   {
     title: "Complete AI & ML",
+    slug: "complete-ai-ml",
     category: "AI",
     duration: "9 Months",
     fee: "₹3,500/month",
     instructor: "Aman Khan",
     icon: BrainCircuit,
     level: "Advanced",
+    description:
+      "Build an end-to-end foundation in AI, machine learning, and practical data workflows through hands-on projects.",
+    whoShouldJoin:
+      "Ideal for students, graduates, and professionals who want to transition into AI/ML roles with portfolio-backed confidence.",
+    highlights: [
+      "Hands-on Python and data analysis",
+      "Real AI/ML project workflow",
+      "Placement-focused interview prep",
+    ],
+    outcomes: [
+      "Train and evaluate machine learning models",
+      "Apply AI concepts in real-world problem solving",
+      "Prepare for internships and placement interviews",
+    ],
     syllabus: [
       "Python",
       "Data Science & Data Analytics",
@@ -34,12 +49,27 @@ export const courses = [
   },
   {
     title: "Complete FullStack Development",
+    slug: "complete-fullstack-development",
     category: "Web Development",
     duration: "8 Months",
     fee: "₹3,000/months",
     instructor: "Aman Khan",
     icon: BarChart3,
     level: "Advanced",
+    description:
+      "Master frontend, backend, databases, and deployment to create full-scale web applications from scratch.",
+    whoShouldJoin:
+      "Perfect for beginners and intermediate learners who want to become job-ready full-stack developers.",
+    highlights: [
+      "Build modern responsive interfaces",
+      "Create REST APIs and databases",
+      "Deploy projects to production",
+    ],
+    outcomes: [
+      "Build dynamic websites and applications",
+      "Work confidently with the MERN stack",
+      "Ship real projects for your portfolio",
+    ],
     syllabus: [
       "HTML/CSS",
       "JavaScript ES6+",
@@ -50,36 +80,80 @@ export const courses = [
       "GIT/GITHUB",
       "Deployment",
     ],
-    // syllabus: ["HTML/CSS", "JavaScript ES6+", "Tailwind CSS", "TypeScript", "ReactJS + Redux", "NodeJs", "MongoDB", "ExpressJs", "NextJs", "GIT/GITHUB", "Deployment"]
   },
   {
     title: "Python",
+    slug: "python",
     category: "Programming",
     duration: "2 Months",
     fee: "₹7,500",
     instructor: "Kalpana Yadav",
     icon: BookOpenCheck,
     level: "Beginner",
+    description:
+      "Learn Python from the ground up with practical coding exercises, logic building, and project-based learning.",
+    whoShouldJoin:
+      "Best for beginners who want a strong foundation in programming and data automation.",
+    highlights: [
+      "Core programming concepts",
+      "Hands-on practice and assignments",
+      "Foundation for AI and web development",
+    ],
+    outcomes: [
+      "Write clean Python programs",
+      "Understand OOP and file handling",
+      "Prepare for advanced tech tracks",
+    ],
     syllabus: ["Core Python", "OOP", "Files Handling", "Advanced Python"],
   },
   {
     title: "Django",
+    slug: "django",
     category: "Development",
     duration: "3 Months",
     fee: "₹22,000",
     instructor: "Django Mentor",
     icon: ShieldCheck,
     level: "Intermediate",
+    description:
+      "Create secure, scalable web applications using Django and Django REST Framework with deployment support.",
+    whoShouldJoin:
+      "Suitable for learners who already know basic Python and want to build backend applications faster.",
+    highlights: [
+      "Build authentication systems",
+      "Create REST APIs with DRF",
+      "Deploy apps confidently",
+    ],
+    outcomes: [
+      "Build real backend projects",
+      "Work with APIs and authentication",
+      "Launch practical web apps",
+    ],
     syllabus: ["Django", "DRF", "Auth", "Cloud Deploy"],
   },
   {
     title: "Computer Skills",
+    slug: "computer-skills",
     category: "Foundation",
     duration: "3 Months",
     fee: "₹7,500",
     instructor: "Foundation Trainer",
     icon: GraduationCap,
     level: "Beginner",
+    description:
+      "Strengthen everyday digital and office skills with practical training in typing, productivity, and online tools.",
+    whoShouldJoin:
+      "Great for students and beginners who want confidence with computers, office tasks, and online communication.",
+    highlights: [
+      "MS Office training",
+      "Typing and productivity practice",
+      "Internet and email confidence",
+    ],
+    outcomes: [
+      "Use office tools confidently",
+      "Create professional documents",
+      "Handle basic digital tasks smoothly",
+    ],
     syllabus: [
       "MS Office",
       "Typing",
@@ -91,12 +165,27 @@ export const courses = [
   },
   {
     title: "Digital Marketing",
+    slug: "digital-marketing",
     category: "Marketing",
     duration: "3 Months",
     fee: "₹12,000",
     instructor: "Kalpana Yadav",
     icon: Megaphone,
     level: "Beginner",
+    description:
+      "Learn modern digital marketing strategy with practical SEO, ads, analytics, and campaign execution skills.",
+    whoShouldJoin:
+      "Perfect for students and entrepreneurs who want to build real marketing skills for modern businesses.",
+    highlights: [
+      "Create marketing campaigns",
+      "Use analytics to improve reach",
+      "Gain practical client-ready skills",
+    ],
+    outcomes: [
+      "Plan and execute digital campaigns",
+      "Understand SEO and social ads",
+      "Improve business visibility online",
+    ],
     syllabus: ["SEO", "Ads", "Analytics", "Campaigns"],
   },
 ];
