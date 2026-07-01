@@ -264,7 +264,7 @@ export const team = [
     role: "Director & Tech Head",
     skills: "AI/ML, Python, React, Node, MongoDB",
     exp: "7 yrs",
-    media: "/assets/aman-khan.jpg",
+    media: "/assets/aman-khan.png",
   },
   {
     name: "Kalpana Yadav",
@@ -285,7 +285,7 @@ export const team = [
     role: "Placement Coordinator",
     skills: "Shopify, HR, Aptitude, Interviews",
     exp: "6 yrs",
-    media: "/assets/asjad-qadri.png",
+    media: "/assets/asjad-qadri.jpeg",
   },
 ];
 
@@ -298,7 +298,7 @@ export const gallery = [
   {
     title: "Web Development Bootcamp",
     type: "Workshop",
-    media: "/assets/gallery2.png",
+    media: "/assets/gallery.jpeg",
   },
   {
     title: "Student Hackathon",
@@ -308,7 +308,7 @@ export const gallery = [
   {
     title: "Placement Drive",
     type: "Event",
-    media: "/assets/gallery.png",
+    media: "/assets/gallery.jpeg",
   },
 ];
 
