@@ -160,6 +160,6 @@ function SEO({
       ) : null}
     </Helmet>
   );
-}
+} 
 
 export default SEO;
