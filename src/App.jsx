@@ -9,6 +9,7 @@ import CourseDetails from "./pages/CourseDetails.jsx";
 import Courses from "./pages/Courses.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Home from "./pages/Home.jsx";
+import JoinNow from "./pages/JoinNow.jsx";
 import Login from "./pages/Login.jsx";
 import Placements from "./pages/Placements.jsx";
 import Register from "./pages/Register.jsx";
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="placements" element={<Placements />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="join-now" element={<JoinNow />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="terms" element={<Terms />} />

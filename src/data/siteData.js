@@ -164,6 +164,31 @@ export const courses = [
     ],
   },
   {
+    title: "Graphics Design & Video Editing",
+    slug: "graphics-design",
+    category: "Design",
+    duration: "4 Months",
+    fee: "₹15,000",
+    instructor: "Design Mentor",
+    icon: Code2,
+    level: "Beginner",
+    description:
+      "Learn to create stunning graphics and videos for social media, marketing, and personal projects using modern tools.",
+    whoShouldJoin:
+      "Ideal for beginners and aspiring designers who want to build a creative portfolio and practical design skills.",
+    highlights: [
+      "Graphic design principles",
+      "Video editing techniques",
+      "Portfolio-ready projects",
+    ],
+    outcomes: [
+      "Create eye-catching graphics",
+      "Edit videos for social media",
+      "Build a design portfolio",
+    ],
+    syllabus: ["Photoshop", "Canva", "Figma", "Illustrator", "Premiere Pro"],
+  },
+  {
     title: "Digital Marketing",
     slug: "digital-marketing",
     category: "Marketing",
@@ -188,6 +213,7 @@ export const courses = [
     ],
     syllabus: ["SEO", "Ads", "Analytics", "Campaigns"],
   },
+
 ];
 
 export const whyChoose = [
@@ -250,6 +276,7 @@ export const batches = [
     mode: "Online",
     seats: 10,
   },
+  { course: "Graphics Design", date: "22 Jul 2026", mode: "Offline", seats: 5 },
 ];
 
 export const quizRankings = [

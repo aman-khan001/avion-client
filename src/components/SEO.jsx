@@ -2,8 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const SITE_NAME = "AVION Academy";
-const DEFAULT_TITLE =
-  "AVION | The Best AI/ML, Python & Web Dev Training in Dewas";
+const DEFAULT_TITLE = " The Best AI/ML, Python, Web Dev Training in Dewas";
 
 const DEFAULT_DESCRIPTION =
   "Master AI/Ml, Full-Stack, Web Development with MERN stack. Get hands-on training, live projects, and 100% placement support. Join now and boost your career!";
@@ -89,6 +88,24 @@ function SEO({
       {/* Basic SEO */}
       <title>{pageTitle}</title>
 
+      {/* <!-- Google tag (gtag.js) --> */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-WYL8HJJ7YH"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function() {
+              window.dataLayer.push(arguments);
+            };
+            window.gtag("js", new Date());
+            window.gtag("config", "G-WYL8HJJ7YH");
+          `,
+        }}
+      />
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -160,6 +177,6 @@ function SEO({
       ) : null}
     </Helmet>
   );
-} 
+}
 
 export default SEO;
