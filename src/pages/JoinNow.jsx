@@ -83,7 +83,7 @@ export default function JoinNow() {
 
       await fetch(
         import.meta.env.VITE_GOOGLE_SCRIPT_URL ||
-          "https://script.google.com/macros/s/AKfycbz9gIiMls6BrbFpV79ygTbKxu5OowvE0Mu9GiIaI8R6wfGj3ohlouCnRq8F9QLTUxMEkw/exec",
+          "https://script.google.com/macros/s/AKfycbwN3bxdAlAquRDG4SYOnw8j8sdrImwd_rVS_Z6iDganbeNXZgYvof7aq7b95ozT_Trt/exec",
         {
           method: "POST",
           mode: "no-cors",
