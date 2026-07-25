@@ -119,6 +119,12 @@ textarea {
   transform: translateX(120%);
 }
 
+.shadow-glow {
+  box-shadow:
+    0 24px 70px rgba(2, 7, 17, 0.18),
+    0 0 64px rgba(159, 239, 0, 0.14);
+}
+
 .btn {
   display: inline-flex;
   min-height: 42px;
