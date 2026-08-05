@@ -118,7 +118,7 @@ export default function JoinNow() {
           <div>
             <SectionHeading
               eyebrow="Welcome to World of Tech"
-              title="AI Bootcamp: Learn, Create & Explore with Artificial Intelligence "
+              title="Learn, Create & Explore with Artificial Intelligence "
               text=" Every student can participate, regardless of stream (Science, Commerce, Arts).
 No programming setup is required.
 Students see immediate value for studies and future careers.
