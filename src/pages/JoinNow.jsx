@@ -110,16 +110,19 @@ export default function JoinNow() {
   return (
     <>
       <SEO
-        title="Contact Us From Ad - Avion Academy"
+        title="Join Us Form - Avion Academy"
         description="Reach out through our ad contact form and we will follow up with your enquiry and store your details securely."
       />
       <section className="section">
         <div className="container grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <SectionHeading
-              eyebrow="Ad enquiry"
-              title="Tell us about your goal and we will reach out."
-              text="This form is built for ad clicks so we can capture the lead source and follow up quickly."
+              eyebrow="Welcome to World of Tech"
+              title="AI Bootcamp: Learn, Create & Explore with Artificial Intelligence "
+              text=" Every student can participate, regardless of stream (Science, Commerce, Arts).
+No programming setup is required.
+Students see immediate value for studies and future careers.
+It naturally leads to interest in your Python, AI/ML, and Full Stack courses."
             />
             <GlassCard className="mt-8 p-5">
               <p className="text-sm font-black text-avion-green">
