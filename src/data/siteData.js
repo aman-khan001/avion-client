@@ -351,11 +351,143 @@ export const adminChartData = [
 export const navLinks = [
   { label: "About", to: "/about" },
   { label: "Courses", to: "/courses" },
+  { label: "Portfolio", to: "/portfolio" },
   { label: "Gallery", to: "/gallery" },
   { label: "Team", to: "/team" },
   { label: "Placements", to: "/placements" },
   { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
+];
+
+export const portfolioServices = [
+  {
+    title: "Web Development",
+    text: "Responsive websites, dashboards, and full-stack web apps built with modern frameworks.",
+    icon: Code2,
+  },
+  {
+    title: "AI & ML Solutions",
+    text: "Custom chatbots, automation workflows, and data-driven tools for smarter business operations.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "E-commerce & Shopify",
+    text: "Online stores, payment integrations, and conversion-focused storefront experiences.",
+    icon: DatabaseZap,
+  },
+  {
+    title: "UI/UX Design",
+    text: "Clean interfaces, brand-aligned visuals, and user journeys that convert visitors into clients.",
+    icon: Sparkles,
+  },
+  {
+    title: "Digital Marketing",
+    text: "SEO, social media campaigns, and analytics-driven growth for local and online businesses.",
+    icon: Megaphone,
+  },
+  {
+    title: "Maintenance & Support",
+    text: "Ongoing updates, performance tuning, and reliable post-launch support for your product.",
+    icon: ShieldCheck,
+  },
+];
+
+export const portfolioProjects = [
+  {
+    title: 'App Portal',
+    category: 'E-commerce',
+    client: 'App Portal Co.',
+    description:
+      'A full-stack e-commerce platform with user authentication, product management, and a smooth checkout experience.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React Query', 'Node.js', 'MongoDB'],
+    highlights: [
+      'Secure user onboarding and profile management',
+      'Dynamic product catalog with search and filters',
+      'Stripe payment integration and order tracking',
+    ],
+    image: '/assets/app-portal.png',
+    link: 'https://preview.codecanyon.net/item/app-portal/full_screen_preview/25416622?_ga=2.175890853.608313247.1751798438-682056470.1751798438',
+    github: 'https://github.com/aman-khan001/app-portal',
+  },
+
+  {
+    title: 'Eventic',
+    category: 'Events',
+    client: 'Eventic Labs',
+    description:
+      'A ticketing and event management platform with organizer dashboards, attendee check-in, and live location support.',
+    stack: ['React', 'Bootstrap', 'Node.js', 'MongoDB', 'Google Maps API'],
+    highlights: [
+      'Organizer dashboard for event creation and analytics',
+      'Ticket sales, seat management, and attendee tracking',
+      'Google Maps integration for event location discovery',
+    ],
+    image: '/assets/eventica.png',
+    link: 'https://preview.codecanyon.net/item/eventic-ticket-sales-and-event-management-system/full_screen_preview/29734714?_ga=2.70500631.608313247.1751798438-682056470.1751798438',
+    github: 'https://github.com/aman-khan001',
+  },
+
+  {
+    title: 'CampusEdu Learning Platform',
+    category: 'Education',
+    client: 'CampusEdu',
+    description:
+      'A student-focused learning platform with progress tracking, live class booking, and course management for educators.',
+    stack: ['React', 'Firebase', 'Tailwind CSS', 'Stripe'],
+    highlights: [
+      'Interactive student dashboard and progress reports',
+      'Live booking and notifications for scheduled sessions',
+      'Admin tools for course publishing and enrollment',
+    ],
+    image: '/assets/gallery3.png',
+    link: 'https://example.com/campusedu-preview',
+    github: 'https://github.com/aman-khan001/campusedu',
+  },
+];
+
+export const portfolioTechStack = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "Python",
+  "Django",
+  "MongoDB",
+  "PostgreSQL",
+  "Tailwind CSS",
+  "Shopify",
+  "OpenAI",
+  "AWS",
+  "Docker",
+];
+
+export const portfolioProcess = [
+  {
+    step: "01",
+    title: "Discovery Call",
+    text: "We understand your goals, audience, timeline, and budget to define the right solution.",
+  },
+  {
+    step: "02",
+    title: "Plan & Design",
+    text: "Wireframes, tech stack selection, and a clear roadmap before development begins.",
+  },
+  {
+    step: "03",
+    title: "Build & Test",
+    text: "Agile development with regular updates, QA checks, and performance optimization.",
+  },
+  {
+    step: "04",
+    title: "Launch & Support",
+    text: "Deployment, handover, training, and ongoing maintenance so your product stays reliable.",
+  },
+];
+
+export const portfolioStats = [
+  { label: "Projects Delivered", value: "40+" },
+  { label: "Happy Clients", value: "25+" },
+  { label: "Technologies", value: "15+" },
+  { label: "On-time Delivery", value: "95%" },
 ];
 
 export const achievements = [

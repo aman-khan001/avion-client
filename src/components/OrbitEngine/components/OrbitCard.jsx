@@ -49,8 +49,10 @@ export default function OrbitCard({ children, className = "" }) {
   }, [engine]);
 
   return (
-    <div ref={elementRef} className={className}>
-      {children}
+    <div className="orbit-card-mount">
+      <div ref={elementRef} className={className}>
+        {children}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,323 @@
+/* AVION Orbit Engine — DOM 3D presentation layer */
+
+.orbit-reviews {
+  --orbit-bg: #020711;
+  --orbit-surface: rgba(255, 255, 255, 0.06);
+  --orbit-border: rgba(159, 239, 0, 0.22);
+  --orbit-green: #9fef00;
+  --orbit-green-soft: rgba(159, 239, 0, 0.14);
+  --orbit-text: rgba(255, 255, 255, 0.92);
+  --orbit-text-muted: rgba(255, 255, 255, 0.62);
+  --orbit-text-soft: rgba(255, 255, 255, 0.45);
+  --orbit-perspective: 1800px;
+  --orbit-stage-height: clamp(20rem, 52vw, 30rem);
+  --orbit-radius: 360px;
+  --orbit-card-width: clamp(14rem, 28vw, 18rem);
+  --orbit-card-min-height: 12rem;
+  --orbit-card-radius: 1.2rem;
+  --orbit-card-padding: 1rem;
+  --orbit-card-shadow: 0 1rem 2.5rem rgba(2, 7, 17, 0.35);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(69, 214, 255, 0.12),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(159, 239, 0, 0.14),
+      transparent 24rem
+    ),
+    linear-gradient(135deg, rgba(2, 7, 17, 0.98), rgba(0, 18, 52, 0.24));
+  border-block: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.orbit-reviews__shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.orbit-reviews__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.orbit-reviews__heading h2 {
+  margin: 0.75rem 0 0.8rem;
+  color: var(--orbit-text);
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.orbit-reviews__heading p {
+  margin: 0;
+  max-width: 38rem;
+  color: var(--orbit-text-muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.orbit-reviews__badges {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.orbit-reviews__badge {
+  min-width: 7.5rem;
+  padding: 0.95rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--orbit-border);
+  background: var(--orbit-surface);
+  backdrop-filter: blur(12px);
+}
+
+.orbit-reviews__badge-value {
+  display: block;
+  color: var(--orbit-green);
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.orbit-reviews__badge-label {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--orbit-text-soft);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.orbit-viewport {
+  position: relative;
+}
+
+.orbit-stage {
+  position: relative;
+  width: 100%;
+  height: var(--orbit-stage-height);
+  margin-inline: auto;
+  perspective: var(--orbit-perspective);
+  perspective-origin: 50% 42%;
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.orbit-stage__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.orbit-stage__glow {
+  position: absolute;
+  inset: 18% 12%;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(159, 239, 0, 0.12),
+    transparent 68%
+  );
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+.orbit-card-mount {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.orbit-card {
+  position: relative;
+  width: var(--orbit-card-width);
+  min-height: var(--orbit-card-min-height);
+  margin-left: calc(var(--orbit-card-width) / -2);
+  margin-top: calc(var(--orbit-card-min-height) / -2);
+  padding: var(--orbit-card-padding);
+  border-radius: var(--orbit-card-radius);
+  border: 1px solid var(--orbit-border);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+  box-shadow: var(--orbit-card-shadow);
+  backdrop-filter: blur(16px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity, filter;
+  pointer-events: auto;
+}
+
+.orbit-card:focus-within {
+  outline: 2px solid rgba(159, 239, 0, 0.65);
+  outline-offset: 3px;
+}
+
+.orbit-card__article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  height: 100%;
+}
+
+.orbit-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.orbit-card__quote {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.75rem;
+  background: var(--orbit-green-soft);
+  color: var(--orbit-green);
+}
+
+.orbit-card__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.orbit-card__text {
+  margin: 0;
+  flex: 1;
+  color: var(--orbit-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.orbit-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.orbit-card__avatar {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--orbit-green);
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.orbit-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orbit-card__meta h3 {
+  margin: 0;
+  color: var(--orbit-text);
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.orbit-card__meta p {
+  margin: 0.15rem 0 0;
+  color: var(--orbit-text-soft);
+  font-size: 0.78rem;
+}
+
+.orbit-reviews__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 2rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(159, 239, 0, 0.35);
+  background: rgba(159, 239, 0, 0.12);
+  color: var(--orbit-green);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.orbit-reviews__cta:hover,
+.orbit-reviews__cta:focus-visible {
+  background: rgba(159, 239, 0, 0.2);
+  border-color: rgba(159, 239, 0, 0.55);
+  color: #d7ff72;
+  outline: none;
+}
+
+.orbit-reviews--reduced-motion .orbit-stage {
+  perspective: none;
+}
+
+.orbit-reviews--reduced-motion .orbit-card {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 1024px) {
+  .orbit-reviews {
+    --orbit-perspective: 1400px;
+    --orbit-stage-height: clamp(20rem, 62vw, 28rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .orbit-reviews {
+    --orbit-perspective: 1100px;
+    --orbit-stage-height: clamp(18rem, 72vw, 24rem);
+    --orbit-card-min-height: 12.5rem;
+  }
+
+  .orbit-reviews__header {
+    margin-bottom: 1.75rem;
+  }
+
+  .orbit-stage {
+    perspective-origin: 50% 46%;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbit-reviews {
+    --orbit-card-width: min(88vw, 18.5rem);
+    --orbit-card-padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-card {
+    transition: none;
+  }
+}

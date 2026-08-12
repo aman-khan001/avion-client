@@ -17,6 +17,7 @@ import StudentDashboard from "./pages/StudentDashboard.jsx";
 import Students from "./pages/Students.jsx";
 import Terms from "./pages/Terms.jsx";
 import Team from "./pages/Team.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="courses" element={<Courses />} />
         <Route path="courses/:slug" element={<CourseDetails />} />
+        <Route path="portfolio" element={<Portfolio />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="team" element={<Team />} />
         <Route path="placements" element={<Placements />} />

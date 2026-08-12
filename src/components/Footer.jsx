@@ -81,6 +81,7 @@ export default function Footer() {
           <p className="footer-title">Explore</p>
           <div className="mt-4 grid gap-3 text-sm text-white/60">
             <Link to="/courses">Courses</Link>
+            <Link to="/portfolio">Portfolio</Link>
             <Link to="/placements">Placements</Link>
             <Link to="/gallery">Gallery</Link>
             <Link to="/contact">Contact</Link>
