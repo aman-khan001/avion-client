@@ -37,6 +37,27 @@
   border-block: 1px solid rgba(255, 255, 255, 0.07);
 }
 
+:root[data-theme="light"] .orbit-reviews {
+  --orbit-bg: #ffffff;
+  --orbit-surface: rgba(255, 255, 255, 0.92);
+  --orbit-border: rgba(27, 58, 47, 0.14);
+  --orbit-green: #1b3a2f;
+  --orbit-green-soft: rgba(159, 239, 0, 0.18);
+  --orbit-text: #111111;
+  --orbit-text-muted: rgba(17, 17, 17, 0.68);
+  --orbit-text-soft: rgba(17, 17, 17, 0.52);
+  --orbit-card-shadow: 0 16px 42px rgba(27, 58, 47, 0.11);
+  background:
+    radial-gradient(circle at top left, rgba(69, 214, 255, 0.1), transparent 24rem),
+    radial-gradient(circle at bottom right, rgba(159, 239, 0, 0.1), transparent 24rem),
+    linear-gradient(135deg, #f5f8f4, #ffffff);
+  border-block-color: var(--orbit-border);
+}
+
+:root[data-theme="light"] .orbit-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 244, 0.92));
+}
+
 .orbit-reviews__shell {
   width: min(1180px, calc(100% - 2rem));
   margin-inline: auto;

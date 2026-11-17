@@ -36,7 +36,7 @@ function SEO({
     alternateName: "Avion Training and Placement Centre",
     url: siteUrl,
     description,
-    logo: `${siteUrl}/assets/avion-logo.png`,
+    logo: `${siteUrl}/assets/avion-dark.png`,
     image: imageUrl,
     email: "avionacademyplacement@gmail.com",
     telephone: "+91-88786-65826",

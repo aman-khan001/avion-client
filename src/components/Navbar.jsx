@@ -1,8 +1,10 @@
-import { Menu, Rocket, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { navLinks } from "../data/siteData.js";
 import { useAuthStore } from "../store/authStore.js";
+import ThemeToggle from "./ThemeToggle.jsx";
+import ThemeLogo from "./ThemeLogo.jsx";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,7 +15,7 @@ export default function Navbar() {
     user?.role === "student" ? "/student/dashboard" : "/admin";
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#020711]/80 backdrop-blur-2xl">
+    <header className="site-navbar fixed left-0 right-0 top-0 z-50 backdrop-blur-2xl">
       <nav className="container flex min-h-16 items-center justify-between py-3">
         <Link
           to="/"
@@ -25,12 +27,7 @@ export default function Navbar() {
           </span> */}
           <span>
             {/* <span className="block text-base font-black uppercase tracking-[0.22em] text-white">Avion</span> */}
-            <img
-              className="w-28 object-cover h-8 object-center"
-              src="/assets/avion-logo.png"
-              loading="lazy"
-              alt="Futuristic Avion academy technology environment"
-            />
+            <ThemeLogo />
             <span className="block text-xs text-white/55">
               Training & Placement Centre
             </span>
@@ -52,6 +49,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           {user ? (
             <>
               <button
@@ -86,7 +84,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-avion-ink px-5 py-5 lg:hidden">
+        <div className="mobile-site-menu border-t px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <NavLink
@@ -98,6 +96,10 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
+            <div className="mt-2 flex items-center justify-between border-t border-white/10 pt-3">
+              <span className="theme-menu-label text-sm font-bold">Theme</span>
+              <ThemeToggle />
+            </div>
             <Link
               className="btn btn-primary mt-3 justify-center"
               to={user ? dashboardPath : "/register"}

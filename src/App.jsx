@@ -18,6 +18,8 @@ import Students from "./pages/Students.jsx";
 import Terms from "./pages/Terms.jsx";
 import Team from "./pages/Team.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
+import Consultancy from "./pages/Consultancy.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 export default function App() {
   return (
@@ -33,10 +35,12 @@ export default function App() {
         <Route path="placements" element={<Placements />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="consultancy" element={<Consultancy />} />
         <Route path="join-now" element={<JoinNow />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="terms" element={<Terms />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route
           path="student/dashboard"
           element={

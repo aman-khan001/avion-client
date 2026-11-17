@@ -9,24 +9,14 @@ import {
   Facebook,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const socialLinks = [
-  { label: "Instagram", icon: Instagram },
-  { label: "LinkedIn", icon: Linkedin },
-  { label: "GitHub", icon: Github },
-];
+import ThemeLogo from "./ThemeLogo.jsx";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#000814]">
+    <footer className="site-footer border-t">
       <div className="container grid gap-10 py-12 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <img
-            className="w-36 object-cover h-auto object-center"
-            src="/assets/avion-logo.png"
-            loading="lazy"
-            alt="Futuristic Avion academy technology environment"
-          />
+          <ThemeLogo className="h-auto w-36 object-contain object-center" />
           <p className="mt-4 max-w-md text-sm leading-7 text-white/60">
             Leading programming training and placement center. Master Web
             Development or AI/ML with industry experts and secure your dream
@@ -81,11 +71,13 @@ export default function Footer() {
           <p className="footer-title">Explore</p>
           <div className="mt-4 grid gap-3 text-sm text-white/60">
             <Link to="/courses">Courses</Link>
+            <Link to="/consultancy">Career Consultancy</Link>
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/placements">Placements</Link>
             <Link to="/gallery">Gallery</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/terms">Terms & Conditions</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
         </div>
         <div>

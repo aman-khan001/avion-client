@@ -7,6 +7,7 @@ export default {
         avion: {
           navy: "#001F54",
           ink: "#020711",
+          primary: "#1B5E20",
           green: "#9FEF00",
           cyan: "#45D6FF",
           violet: "#7C5CFF"

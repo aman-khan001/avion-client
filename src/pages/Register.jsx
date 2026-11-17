@@ -1,15 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useQuery } from "@tanstack/react-query";
-import { BadgePlus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { z } from "zod";
 import GlassCard from "../components/GlassCard.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
 import { courses as fallbackCourses } from "../data/siteData.js";
-import { api, apiMessage } from "../lib/api.js";
-import { useAuthStore } from "../store/authStore.js";
 import SEO from "../components/SEO.jsx";
 import { uploadToCloudinary } from "../lib/cloudinary.js";
 
@@ -47,8 +43,6 @@ export default function Register() {
   const [error, setError] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
-  const setSession = useAuthStore((state) => state.setSession);
-  const navigate = useNavigate();
   const location = useLocation();
 
   const {
@@ -154,7 +148,7 @@ export default function Register() {
                   2. Upload a recent photo and your Aadhar card (image or PDF).
                 </span>
                 <span>
-                  3. Click the "Submit Registration" button to complete the
+                  3. Click the &quot;Submit Registration&quot; button to complete the
                   process.
                 </span>
                 <span>

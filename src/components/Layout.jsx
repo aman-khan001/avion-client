@@ -11,7 +11,7 @@ export default function Layout() {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen bg-avion-ink text-white">
+    <div className="site-layout min-h-screen">
       <div className="particle-field" aria-hidden="true" />
       <Navbar />
       <main className="pt-16">

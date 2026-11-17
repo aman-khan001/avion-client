@@ -1,0 +1,506 @@
+.consultancy-page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+:root[data-theme="light"] .consultancy-page {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.consultancy-hero {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: clamp(4rem, 8vw, 7rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+.consultancy-hero-grid {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.consultancy-eyebrow {
+  margin: 0 0 0.75rem;
+  color: #9fef00;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.consultancy-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.55rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.consultancy-hero h1 span {
+  color: #9fef00;
+}
+
+.consultancy-hero-copy {
+  max-width: 650px;
+  margin: 1.35rem 0 1.75rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.consultancy-trust-card {
+  position: relative;
+  max-width: 430px;
+  border: 1px solid rgba(159, 239, 0, 0.18);
+  border-radius: 22px;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, rgba(27, 58, 47, 0.72), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+}
+
+.consultancy-orbit {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.25rem;
+  place-items: center;
+  border: 1px solid rgba(159, 239, 0, 0.32);
+  border-radius: 50%;
+  background: rgba(159, 239, 0, 0.08);
+  color: #9fef00;
+  box-shadow: 0 0 50px rgba(159, 239, 0, 0.12);
+}
+
+.consultancy-trust-card strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.consultancy-trust-card > span {
+  display: block;
+  margin-top: 0.55rem;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.consultancy-trust-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+}
+
+.consultancy-trust-footer svg {
+  color: #9fef00;
+}
+
+.consultancy-form-wrap {
+  display: grid;
+  gap: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  scroll-margin-top: 5rem;
+}
+
+.consultancy-progress {
+  display: none;
+}
+
+.consultancy-form-card {
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: clamp(1rem, 4vw, 2rem);
+  background: linear-gradient(145deg, rgba(27, 58, 47, 0.38), rgba(255, 255, 255, 0.045));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.consultancy-mobile-progress {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+.consultancy-mobile-progress > span {
+  float: right;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.72rem;
+}
+
+.consultancy-mobile-progress strong {
+  font-size: 0.82rem;
+}
+
+.consultancy-mobile-progress div {
+  height: 4px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.consultancy-mobile-progress i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #9fef00;
+  transition: width 220ms ease;
+}
+
+.consultancy-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.consultancy-section-heading > p {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 1px solid rgba(159, 239, 0, 0.25);
+  border-radius: 12px;
+  background: rgba(159, 239, 0, 0.08);
+  color: #9fef00;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.consultancy-section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 4vw, 1.8rem);
+}
+
+.consultancy-section-heading span {
+  display: block;
+  margin-top: 0.15rem;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.78rem;
+}
+
+.consultancy-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.consultancy-grid-spaced {
+  margin-top: 1rem;
+}
+
+.consultancy-field {
+  min-width: 0;
+}
+
+.consultancy-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.consultancy-label span {
+  color: #9fef00;
+}
+
+.consultancy-input,
+.consultancy-select,
+.consultancy-textarea,
+.consultancy-file {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: rgba(2, 7, 17, 0.58);
+  color: #fff;
+  outline: none;
+  padding: 0.78rem 0.9rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.consultancy-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.consultancy-input:focus,
+.consultancy-select:focus,
+.consultancy-textarea:focus,
+.consultancy-file:focus {
+  border-color: rgba(159, 239, 0, 0.7);
+  box-shadow: 0 0 0 4px rgba(159, 239, 0, 0.07);
+  background: rgba(27, 58, 47, 0.34);
+}
+
+.consultancy-select option {
+  background: #020711;
+}
+
+.consultancy-error {
+  margin: 0.35rem 0 0;
+  color: #fda4af;
+  font-size: 0.75rem;
+}
+
+.consultancy-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.consultancy-skills button {
+  min-height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.055);
+  color: rgba(255, 255, 255, 0.72);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.consultancy-skills button.selected {
+  border-color: rgba(159, 239, 0, 0.65);
+  background: rgba(159, 239, 0, 0.13);
+  color: #eaffca;
+}
+
+.consultancy-file::file-selector-button {
+  margin-right: 0.75rem;
+  border: 0;
+  border-radius: 7px;
+  background: #9fef00;
+  color: #020711;
+  padding: 0.55rem 0.75rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.consultancy-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 0.85rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.consultancy-consent input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  accent-color: #9fef00;
+}
+
+.consultancy-submit-error {
+  margin: 1rem 0 0;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-radius: 10px;
+  background: rgba(248, 113, 113, 0.08);
+  color: #fecaca;
+  padding: 0.75rem;
+  font-size: 0.78rem;
+}
+
+.consultancy-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.25rem;
+}
+
+.consultancy-next {
+  border: 0;
+  cursor: pointer;
+}
+
+.consultancy-next:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.consultancy-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.68);
+  cursor: pointer;
+}
+
+.consultancy-spinner {
+  animation: consultancy-spin 800ms linear infinite;
+}
+
+@keyframes consultancy-spin {
+  to { transform: rotate(360deg); }
+}
+
+.consultancy-success {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 720px;
+  place-items: center;
+  padding: 5rem 1rem;
+}
+
+.consultancy-success-card {
+  width: min(620px, 100%);
+  border: 1px solid rgba(159, 239, 0, 0.22);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(27, 58, 47, 0.58), rgba(255, 255, 255, 0.055));
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.35);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  backdrop-filter: blur(18px);
+}
+
+.consultancy-success-icon {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(159, 239, 0, 0.12);
+  color: #9fef00;
+}
+
+.consultancy-success-card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.08;
+}
+
+.consultancy-success-card > p:not(.consultancy-eyebrow) {
+  margin: 1rem auto;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.75;
+}
+
+.consultancy-candidate-id {
+  display: grid;
+  gap: 0.2rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(159, 239, 0, 0.18);
+  border-radius: 12px;
+  background: rgba(159, 239, 0, 0.06);
+  padding: 0.9rem;
+}
+
+.consultancy-candidate-id span {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.72rem;
+}
+
+.consultancy-candidate-id strong {
+  color: #9fef00;
+  letter-spacing: 0.08em;
+}
+
+.consultancy-home-btn {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .consultancy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .consultancy-full {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consultancy-hero-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
+  }
+
+  .consultancy-form-wrap {
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
+    gap: 1.25rem;
+  }
+
+  .consultancy-progress {
+    display: grid;
+    gap: 0.25rem;
+    position: sticky;
+    top: 6rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.035);
+    padding: 0.65rem;
+  }
+
+  .consultancy-progress-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.48);
+    padding: 0.75rem;
+  }
+
+  .consultancy-progress-item.active {
+    background: rgba(159, 239, 0, 0.09);
+    color: #fff;
+  }
+
+  .consultancy-progress-icon {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9px;
+  }
+
+  .consultancy-progress-item.active .consultancy-progress-icon,
+  .consultancy-progress-item.complete .consultancy-progress-icon {
+    border-color: rgba(159, 239, 0, 0.38);
+    background: rgba(159, 239, 0, 0.1);
+    color: #9fef00;
+  }
+
+  .consultancy-progress-item small,
+  .consultancy-progress-item strong {
+    display: block;
+  }
+
+  .consultancy-progress-item small {
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.65rem;
+  }
+
+  .consultancy-progress-item strong {
+    margin-top: 0.12rem;
+    font-size: 0.78rem;
+  }
+
+  .consultancy-mobile-progress {
+    display: none;
+  }
+}

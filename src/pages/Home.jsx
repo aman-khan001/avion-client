@@ -30,15 +30,15 @@ export default function Home() {
     <>
       <SEO />
 
-      <section className="relative isolate min-h-[92vh] overflow-hidden">
+      <section className="home-hero relative isolate min-h-[92vh] overflow-hidden">
         <div className="hero-grid absolute inset-0 z-0" />
         <img
-          className="absolute inset-0 h-full w-full object-cover opacity-70"
+          className="home-hero-art absolute inset-0 h-full w-full object-cover"
           src="/assets/avion-hero.jpeg"
           alt="Futuristic Avion academy technology environment"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020711] via-[#020711]/90 to-[#020711]/25" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(159,239,0,0.16),transparent_36%)]" />
+        <div className="home-hero-overlay absolute inset-0" />
+        <div className="home-hero-accent absolute inset-0" />
         <div className="container relative z-10 grid min-h-[92vh] items-center gap-10 py-20 lg:grid-cols-[1.08fr_0.92fr]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -51,15 +51,15 @@ export default function Home() {
             <p className="mt-6 section-eyebrow">
               AVION Academy | Programming Training in Dewas
             </p>
-            <h1 className="mt-4 max-w-xl text-[clamp(1.8rem,5vw,4.4rem)] font-black leading-[0.95] text-white">
+            <h1 className="home-hero-title mt-4 max-w-xl text-[clamp(2rem,5vw,4.25rem)] font-black leading-[1.02] text-white">
               Best AI/ML & Web Development Training in Dewas
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+            <p className="home-hero-copy mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
               Learn practical coding, build real projects, and get placement
               support in Python, MERN, web development, AI/ML, and digital
               marketing.
             </p>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
+            <p className="home-hero-copy mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
               We offer online and offline training with guidance that helps
               students move from learning to career-ready confidence.
             </p>
@@ -74,7 +74,7 @@ export default function Home() {
                 Explore Courses <ChevronRight size={18} />
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/70">
+            <div className="home-hero-pills mt-8 flex flex-wrap gap-3 text-sm text-white/70">
               <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">
                 Live projects
               </span>
@@ -91,11 +91,11 @@ export default function Home() {
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="rounded-[30px] border border-white/10 bg-[#020711]/70 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl"
+            className="home-feature-card rounded-[20px] border border-white/10 bg-[#020711]/70 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl"
           >
             <p className="section-eyebrow">Why learners choose AVION</p>
             <div className="mt-5 grid gap-3">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="home-feature-row rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="flex items-center gap-3">
                   <div className="rounded-2xl bg-avion-green/15 p-2 text-avion-green">
                     <BrainCircuit size={18} />
@@ -110,7 +110,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="home-feature-row rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="flex items-center gap-3">
                   <div className="rounded-2xl bg-avion-green/15 p-2 text-avion-green">
                     <BadgeCheck size={18} />
@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-6 rounded-2xl border border-avion-green/20 bg-avion-green/10 p-4">
+            <div className="home-feature-primary mt-5 rounded-xl border border-avion-green/20 bg-avion-green/10 p-4">
               <div className="flex items-center gap-3">
                 <div className="rounded-2xl bg-avion-green/20 p-2 text-avion-green">
                   <BadgeCheck size={18} />

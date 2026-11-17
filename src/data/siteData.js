@@ -213,6 +213,56 @@ export const courses = [
     ],
     syllabus: ["SEO", "Ads", "Analytics", "Campaigns"],
   },
+  {
+    title: "Shopify Development",
+    slug: "shopify-development",
+    category: "E-commerce",
+    duration: "2 Months",
+    fee: "₹10,000",
+    instructor: "Shopify Mentor",
+    icon: DatabaseZap,
+    level: "Intermediate",
+    description:
+      "Build and customize Shopify stores with themes, apps, and payment integrations for e-commerce success.",
+    whoShouldJoin:
+      "Best for learners with basic web development knowledge who want to specialize in e-commerce solutions.",
+    highlights: [
+      "Shopify store setup and customization",
+      "Theme development and app integration",
+      "Payment gateway and checkout optimization",
+    ],
+    outcomes: [
+      "Launch functional Shopify stores",
+      "Customize themes and features",
+      "Manage products and orders effectively",
+    ],
+    syllabus: ["Shopify Basics", "Theme Development", "Apps & Integrations"],  
+  },
+  {
+    title: "Data Analytics & Visualization",
+    slug: "data-analytics-visualization",
+    category: "Data Science",
+    duration: "3 Months",
+    fee: "₹15,000",
+    instructor: "Data Science Mentor",
+    icon: BarChart3,
+    level: "Intermediate",
+    description:
+      "Learn to analyze data and create compelling visualizations for informed decision-making.",
+    whoShouldJoin:
+      "Ideal for professionals looking to enhance their data analysis and visualization skills.",
+    highlights: [
+      "Data cleaning and preprocessing",
+      "Statistical analysis techniques",
+      "Interactive dashboard creation",
+    ],
+    outcomes: [
+      "Analyze complex datasets effectively",
+      "Create insightful visualizations",
+      "Communicate findings clearly to stakeholders",
+    ],
+    syllabus: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+  }
 
 ];
 
@@ -351,6 +401,7 @@ export const adminChartData = [
 export const navLinks = [
   { label: "About", to: "/about" },
   { label: "Courses", to: "/courses" },
+  { label: "Consultancy", to: "/consultancy" },
   { label: "Portfolio", to: "/portfolio" },
   { label: "Gallery", to: "/gallery" },
   { label: "Team", to: "/team" },

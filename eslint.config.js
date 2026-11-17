@@ -17,11 +17,28 @@ export default [
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
+        Blob: "readonly",
+        cancelAnimationFrame: "readonly",
         document: "readonly",
-        window: "readonly",
+        fetch: "readonly",
+        FileList: "readonly",
+        FileReader: "readonly",
+        global: "readonly",
+        HTMLElement: "readonly",
         console: "readonly",
         FormData: "readonly",
-        process: "readonly"
+        crypto: "readonly",
+        process: "readonly",
+        requestAnimationFrame: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        window: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        vi: "readonly"
       },
       parserOptions: {
         ecmaFeatures: {

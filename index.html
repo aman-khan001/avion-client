@@ -70,7 +70,7 @@
         "name": "Avion Training and Placement Centre",
         "url": "https://avionacademy.co.in",
         "description": "Top programming training and placement center. Master Web Development or AI/ML with industry experts and secure your dream tech job. Start learning today!",
-        "logo": "https://avionacademy.co.in/assets/avion-logo.png",
+        "logo": "https://avionacademy.co.in/assets/avion-dark.png",
         "image": "https://avionacademy.co.in/assets/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
@@ -88,6 +88,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("avion-theme");
+        document.documentElement.dataset.theme =
+          savedTheme === "light" ? "light" : "dark";
+      } catch (_) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
